@@ -79,15 +79,18 @@
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade show active" id="oview" role="tabpanel">
-                <p>The motivation behind the "start-template" is essentially 2 fold.
+                <p>The following assumptions have been made, These are :-
                 <ol>
-                    <li><b>First Project -</b> This is an ideal first project.</li>
-                    <li><b>My Template -</b> On looking through the Visual Studio 2022 Templates I noticed that there
-                        was not
-                        a Template that could be used without preparation, bearing this in mind it made perfect sense to
-                        create such a project from this template.</li>
+                    <li><b>Microsoft Visual Studio 2022 - </b>Has been installed.</li>
+                    <li><b>Microssoft SQL Server - </b>Has been installed.</li>
+                    <li><b>Microssoft SQL Server Management Studio - </b>Has been installed.</li>
+                    <li>You are familiar with the installed software.</li>
                 </ol>
                 </p>
+                <p>
+                    The purpose of the solution is to provide a starting point for future projects the aim of this solution is to save it as a template for Visual Studio so that template can then be used to create a new solution with all the bells and whistles without the need to make any standard changes.  That is to say software has various default elements which have to be implemented everytime with the default templates by creating a customised template this extra work can be eliminated.
+                </p>
+                <p>For more information on the solution see the solutions tab</p>
             </div>
             <div class="tab-pane fade" id="solution" role="tabpanel">
                 <p>TO DO.</p>
@@ -102,7 +105,24 @@
                 <p>TO DO.</p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
-                <p>TO DO.</p>
+                <p>Testing has been a major part of software development from day 1 however, testing methodologies has changed.  What are the advantages of Unit Testing? 
+                    <ol>
+                        <li><b>Balanced Approached - </b>Tests should be wrote ahead of the source code from the specification which outlines the parameters of the associated method. Only dynamic(Can be changed) internal(Not external Libraries or Frameworks) methods should be tested.</li>
+                        <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are Testable (one unit of work), meaning a method which in the past did several units of work then that method is not testable, however by breaking the method down into manageable components each component can be tested.  As a result the quality of code is improved.</li>
+                        <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up, one down vulnerability" which in short enables code to be exploited when for example a loop does one too many or few iterations, if these can be exposed then the software is inherently more secure.</li>
+                        <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws attention to the change and means that both the test and change should be reviewwed as the test may be too strict or the change does in fact take the method outside of the specified parameters of the method meaning that potential issues are exposed.  Whereby in the past this would have been missed.</li>
+                    </ol>
+                    This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app project it  uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in any future project also don't forget to update the GlobalUsings.cs to include new projects and/or folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in the Test Explorer. Fluent assertions provides meaningful results when run.
+                </p>
+                <p>The Naming convention of unit testing is a s below
+                    <ol>
+                        <li><b>Unit Testing Project - </b>This is simply called Unit Testing.</li>
+                        <li><b>Project being tested - </b>This is a new folder called "UT.{Projectname}".</li>
+                        <li><b>Class being tested - </b>A Class be created within the project folder called "{ClassName}Tests". </li>
+                        <li><b>Method being Tested - </b>a method should be created with the name "{methodname}_{ReturnType}" this ensures all overloads can be tested independently.</li>
+                    </ol>
+                    The above naming convention allows a structure to the tests and indicates exactly what is being tested in the results making life easier for developers. If you are new to Unit Testing I would suggest you view a youtube video in conjunction with the examples in the start-template.UnitTesting project. 
+                </p>
             </div>
         </div>
     </main>
