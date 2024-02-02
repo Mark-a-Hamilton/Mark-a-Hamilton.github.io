@@ -36,24 +36,120 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">Documentation</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href=".\template.html">Start-Template</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
-                    </li>
-                    <!--<li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>-->
                 </ul>
             </div>
         </div>
     </nav>
     <main>
-
+        <h2 class="header-center">Deploy Software</h2>
+        <hr>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#oview" aria-selected="true"
+                    role="tab">Overview</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#customer" aria-selected="false" tabindex="-1"
+                    role="tab">Customer</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#supplier" aria-selected="false" tabindex="-1"
+                    role="tab">Supplier</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#strategy" aria-selected="false" tabindex="-1"
+                    role="tab">Strategy</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#windows" aria-selected="false" tabindex="-1"
+                    role="tab">Windows</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#3rdpty" aria-selected="false" tabindex="-1"
+                    role="tab">3<sup>rd</sup> Party Software</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="oview" class="tab-pane fade show active" role="tabpanel">
+                <p>Most of my IT career has been spent in support, as a result this has given me an insight into the
+                    perception from both the Customer & supplier where each has multiple levels (see the Customer &
+                    Supplier Tabs). The main difference is that the Customer is on the whole IT Illiterate unlike the
+                    Supplier. As a result this means that the Customer just wants a working software system while the
+                    development team is more concerned with getting the software up and running.</p>
+            </div>
+            <div id="customer" class="tab-pane fade" role="tabpanel">
+                <p>There are 3 Basic types of Customer though this will vary depending on the size of the operation
+                <ol>
+                    <li><b>Business Owners </b>Are mainly concerned with returning the most profits with as little
+                        outlay as possible. This, also involves IT systems and unfortunately the business owners also
+                        hold the purse strings.</li>
+                    <li><b>Managers / Supervisors </b>Are mainly concerned with hitting targets, as they have the
+                        business owners chasing for results. It is fair to say that some (though not all) are bullies,
+                        which means in some circumstances they believe that the louder you shout the more things will
+                        get done. In short this breed of manager / supervisor has no people skills, meaning as a support
+                        engineer I soon developed a thick skin and learned how to deal with such attitudes.</li>
+                    <li><b>Staff / Sales Assistants </b>Ironically these are the users of a software system, have no
+                        control over the system and suffer the frustration if theres a problem due to a lack of
+                        understanding the problem. Also having their manager and/or supervisor trying to get them to
+                        make the system work adds to the pressure.</li>
+                </ol>
+                </p>
+            </div>
+            <div id="supplier" class="tab-pane fade" role="tabpanel">
+                <p>
+                <ol>
+                    <li><b>Sales Staff </b>are usually on commission / performance based pay to encourage sales. This
+                        results in empty promises, so in short customers make a request and sales staff will agree with
+                        the customer just to make a sale. As a support engineer I've had complaints from customers when
+                        they were promised functionality would be done but it hasn't.</li>
+                    <li><b>Developers </b>are solely focussed on the software product.</li>
+                    <li><b>Support </b>I accept my view is biased but it seems support are responsible for picking up
+                        the pieces.</li>
+                </ol>
+                </p>
+            </div>
+            <div id="strategy" class="tab-pane fade" role="tabpanel">
+                <p>The Deployment Strategy initially is to keep the hardware (computer) Healthy and to make the software
+                    as efficient as possible, By doing the Windows only (free) steps will prevent most performance
+                    related software support calls. Having said that by also including 3rd Party software will reduce
+                    the support calls even more. This strategy focuses on maintaining the Health of the PC which I
+                    believe is overlooked and underestimated by development teams.</p>
+            </div>
+            <div id="windows" class="tab-pane fade" role="tabpanel">
+                <p>Assuming the software will be deployed on a windows based platform there are several tools which can
+                    be used in order to provide a minimum maintenance strategy with little impact on the supplier these
+                    tools are, bearing in mind alot of support calls may be resolved by basic maintenance setting up a
+                    machine will prevent such support calls :-
+                <ol>
+                    <li><b>Task Scheduler </b>enables maintenance to be done automatically meaning each machine can be
+                        configured based on the Business requirements.</li>
+                    <li><b>Disk Defragmenter </b>should be scheduled Daily, note the more frequent it is scheduled the
+                        less there is to do, Optimizing the HDD regularly. </li>
+                    <li><b>Disk Cleanup Manager </b>should be scheduled daily, note the more frequent it is scheduled
+                        the less there is to do, Meaning unwanted files will be removed regularly.</li>
+                    <li><b>Restart </b>by scheduling the "shutdown -r" command at an appropriate time ensures the
+                        machine will be regularly restarted, Releasing memory on a regular basis.</li>
+                    <li><b>Security & Maintenance Section </b>should be enabled within Windows.</li>
+                    <li><b>Windows Defender </b>Should be enabled and configured within Windows, Basic antivirus (Better
+                        than nothing).</li>
+                    <li><b>Automatic Windows Updates </b>should be configured to run automatically, keeping the
+                        operating system up to date.</li>
+                </ol>
+                </p>
+            </div>
+            <div id="3rdpty" class="tab-pane fade" role="tabpanel">
+                <p>There are 3rd party software titles which do more than the Windows Maintenance having said that they
+                    are usually chargeble, not limited to but some titles are :-
+                <ol>
+                    <li><b>Avira AV </b>More advanced AV software takes precedence over Windows Defender.</li>
+                    <li><b>CCleaner </b>More in Depth software to keep the PC healthy.</li>
+                    <li><b>Ease Us Suite </b>Several Utilities again to keep the PC healthy.</li>
+                </ol>
+                It is Advised to review all the 3rd Party tools establishing the best value to be deployed with the
+                sofware, as 3<sup>rd</sup> Party Software Providers will usually require a charge or donation.
+                </p>
+            </div>
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"
