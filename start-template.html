@@ -35,15 +35,6 @@
                             <span class="visually-hidden">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">Documentation</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href=".\start-template.html">Start-Template</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -150,32 +141,22 @@
                 deal with making the log entries in the solution.</p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
-                <p><b>Status - Done.</b><br><b>FrameWork - Xunit Project</b><br>Testing has been a major part of software development from day 1 however,
-                    testing methodologies has changed. What are the advantages of Unit Testing?
-                <ol>
-                    <li><b>Balanced Approached - </b>Tests should be wrote ahead of the source code from the
-                        specification which outlines the parameters of the associated method. Only dynamic(Can be
-                        changed) internal(Not external Libraries or Frameworks) methods should be tested.</li>
-                    <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are
-                        Testable (one unit of work), meaning a method which in the past did several units of work then
-                        that method is not testable, however by breaking the method down into manageable components each
-                        component can be tested. As a result the quality of code is improved.</li>
-                    <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up,
-                        one down vulnerability" which in short enables code to be exploited when for example a loop does
-                        one too many or few iterations, if these can be exposed then the software is inherently more
-                        secure.</li>
-                    <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws
-                        attention to the change and means that both the test and change should be reviewwed as the test
-                        may be too strict or the change does in fact take the method outside of the specified parameters
-                        of the method meaning that potential issues are exposed. Whereby in the past this would have
-                        been missed.</li>
-                </ol>
-                This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app
-                project it uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent
-                    Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in
-                any future project also don't forget to update the GlobalUsings.cs to include new projects and/or
-                folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in
-                the Test Explorer. Fluent assertions provides meaningful results when run.
+                <p><b>Status - Done.<br>FrameWork - Xunit Project</b><br>In order to fully understand Unit Testing (UT) it is necessary to understand the basic principles of UT.  Testing has always been done in the Software development lifecycle UT is only one of the Later strategies <br>
+                    <ul>
+                        <li><b>History of Testing </b>initially testing was done using Dry Runs (pen and paper) very monotonous, laborious and time-consuming, as a result not very efficient. This was later improved in an attempt to auromate the process be writing specific methods to call the relevant method and test the output.  This approach was the predecessor to UT as we know it.</li>
+                        <li><b>Analogy of Software defences </b>it is reasonable to compare software protection with an animal such as a crustacion, shell-fish or insect. Which all have protective outer layers and soft (vulnerable) insides.  This strategy is also employed by the military for example armoured vehicles to protect the vulnerable service-personnel. The Job of the User Interface (UI) is to act as that hard exterior in order to protect the vulnerable Operating System (OS) this is where UT comes in.</li>
+                        <li><b>Software Vulnerabilities </b>Unscrupulous programmers use various means to exploit software by using methods which are in line with computer rules but the software was not designed to deal with causing the software to crash providing a chink in the armour of the UI enabling the Software to be exploited,  Such common methods are SQL Injection, Cross-Site Scripting, One-up One-down vulnerabilities to name but a few. As a result UT is a tool used to protect the software. This raisess the question how can we use UT to protect software <br> <ol>
+                            <li><b>Specification </b>all methods to be tested should be defined in the specification as a result each test can be wrote before the method being tested so the test is wrote to the specification NOT the method.</li>
+                            <li><b>Method </b>once the method has been wrote and complies with the test, The test can be revised by inspecting the source-code with a view to breaking the method (previously known as Testing to Destruction). All appropriate validation can be implemented as required in the method and test, tightening up any loose ends so to speak.</li>
+                            <li><b>Example of validation </b>the functionality to add two integers is really straight forward or so you might think "number1 + number2" however it is possible that the equation will not work because the computer has a Maximum value so such validation could be done to ensure the calculation is correct by introducing a 3rd variable so "total = number1 + number2" the validation could then be "if (number2 != total - number1) throw exception" the test would be changed to ensure the appropriate exception is thrown.</li>
+                        </ol></li>
+                        <li><b>Balanced Approached - </b>Tests should be wrote for methods which originate in the product and are dynamic(Can be changed)
+                        specification which outlines the parameters of the associated method. Only dynamic internal(Not external Libraries or Frameworks) methods should be tested.</li>
+                        <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are Testable (one unit of work meaning a method which in the past did several units of work then that method is not testable, however by breaking the method down into manageable components each component can be tested. As a result the quality of code is improved.</li>
+                        <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up, one down vulnerability" which in short enables code to be exploited when for example a loop does one too many or few iterations, if these can be exposed then the software is inherently more secure.</li>
+                        <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws attention to the change and means that both the test and change should be reviewwed as the test may be too strict or the change does in fact take the method outside of the specified parameters of the method meaning that potential issues are exposed. Whereby in the past this would have been missed.</li>
+                    </ul> 
+                    This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app project it uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in any future project also don't forget to update the GlobalUsings.cs to include new projects and/or folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in the Test Explorer. Fluent assertions provides meaningful results when run.
                 </p>
                 <p>The Naming convention of unit testing is a s below
                 <ol>
