@@ -62,13 +62,13 @@
             <!--
             <li class="nav-item" role="presentation">
                 <a class="nav-link" data-bs-toggle="tab" href="#api" aria-selected="false" tabindex="-1"
-                    role="tab">API</a>
+                    role="tab">API</a>-->
             </li>
             <li class="nav-item" role="presentation">
                 <a class="nav-link" data-bs-toggle="tab" href="#log" aria-selected="false" tabindex="-1"
                     role="tab">Log</a>
             </li>
-            -->
+
             <li class="nav-item" role="presentation">
                 <a class="nav-link" data-bs-toggle="tab" href="#utest" aria-selected="false" tabindex="-1"
                     role="tab">Unit Testing</a>
@@ -101,64 +101,138 @@
                     responsibility resulting in the following 2 projects per solution :-
                 <ol>
                     <li><b>App Project - </b>This is the startup Project and deals with the main application set up
-                        including Models Functionality & Views. </li><!--
+                        including Models Functionality, Views & logging. However, the built in Logging is to say the
+                        least Basic, for that reason I've opted to use a 3<sup>rd</sup> party package from Serilog. See
+                        the Logging section for more information on logging.</li>
+                    <!--
                     <li><b>API Project - </b>This deals with database connectivity, and CRUD operations using ReSTful
-                        Services.</li>
-                    <li><b>Logging Project - </b>This Deals with all aspects of logging including connecting to the Log
-                        Database. Global Exception Handling, Other log events which means that all logging in a solution
-                        is consistant.</li>-->
+                    </li>
+                        Services.</li>-->
+                    <li><b>Logging - </b>Logging is not included in a separate project as there is not enough content to
+                        justify a separate project. Serilog has been configured to replace the built in logging, in
+                        order to extend the functionality it is necessary to add the appropriate Serilog.Sinks package
+                        and add the Configuration to use the new sinks.
+                    </li>
                     <li><b>Unit Testing Project - </b>To Deal with all Unit Testing within the Project which is an
                         important element because these provide a quick reliable check to ensure the methods tested
                         remain in the Parameters of the specification.</li>
                 </ol>
-                It is worth noting that an alternative is to include the functionality into the "App project" However,
-                it is common practice to enable 3rd parties to access the database using the API project as being an
-                interface this keeps the database secure. Not forgetting that there can be different teams working on
-                the different projects simultaneously without the risk of "stepping on each others toes" (To coin a
-                phrase). Also, when the website is run it is necessary to load and render the project so if we have the
-                app Project doing the bare minimum then this will at least give the perception of improved performance.
                 </p>
             </div>
             <div class="tab-pane fade" id="use" role="tabpanel">
-                <p>First, feel free to clone and use the project, having said that I would suggest that you ensure the project fully meets your needs and if not amend it to meet your needs,  then create a template not forgetting to keep everything up to date for security reasons. Also if you don't know how to <a href="https://www.youtube.com/watch?v=f6xc5Jg5Sy8" target="_blank">clone</a> or <a href="https://www.youtube.com/watch?v=UNYC53m3Lw8" target="_blank">create a template</a> then simply click the links for a video guide.</p>
+                <p>First, feel free to clone and use the project, having said that I would suggest that you ensure the
+                    project fully meets your needs and if not amend it to meet your needs, then create a template not
+                    forgetting to keep everything up to date for security reasons. Also if you don't know how to <a
+                        href="https://www.youtube.com/watch?v=f6xc5Jg5Sy8" target="_blank">clone</a> or <a
+                        href="https://www.youtube.com/watch?v=UNYC53m3Lw8" target="_blank">create a template</a> then
+                    simply click the links for a video guide.</p>
             </div>
             <div class="tab-pane fade" id="app" role="tabpanel">
-                <p><b>Status - Done.<br>FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that the MVC framework can be used to do all the tasks required in a project having said that the purpose of the "App Project" is to act as a <b>start-up project and hub</b> so that everything goes through the app but elements such as database access, logging & testing are done by specialist projects as and when required which provides consistency throughout solutions and projects within the solution. The App project contains the Models which can be created from either an existing database or from code.</p>
+                <p><b>Status - Done.<br>FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that
+                    the MVC framework can be used to do all the tasks required in a project having said that the purpose
+                    of the "App Project" is to act as a <b>start-up project and hub</b> so that everything goes through
+                    the app but elements such as database access, logging & testing are done by specialist projects as
+                    and when required which provides consistency throughout solutions and projects within the solution.
+                    The App project contains the Models which can be created from either an existing database or from
+                    code.</p>
             </div>
             <div class="tab-pane fade" id="api" role="tabpanel">
-                <p><b>Status - To Do.</b><br><b>FrameWork - Web API Project</b><br>The purpose of the Application Programmable Interface is to provide a facility by which a request can be made to the database securely. Without giving access to the database or divulging its structure unnecessarily, meaning you are in control of the Data. </p>
+                <p><b>Status - To Do.</b><br><b>FrameWork - Web API Project</b><br>The purpose of the Application
+                    Programmable Interface is to provide a facility by which a request can be made to the database
+                    securely. Without giving access to the database or divulging its structure unnecessarily, meaning
+                    you are in control of the Data. </p>
             </div>
             <div class="tab-pane fade" id="log" role="tabpanel">
-                <p><b>Status - To Do.</b><br>Logging has 3 main components these are :-
-                <ol>
-                    <li><b>Connecting to the logging Media - </b>This includes defining the logging database connection
-                        string which if the database does not exist it will create the database and subsequently the
-                        "Log" table automatically while remaining totally divorced from the main app meaning the log can
-                        reside on a different server to the Data again ensuring data security.</li>
-                    <li><b>Global Exception Handling - </b>This ensures that all Exceptions will be handled consistently
-                        throughout the solution wherever the exception is thrown</li>
-                    <li><b>Global Logging - </b>This again ensures that all the logging is consistent throughout the
-                        solution. </li>
-                </ol>The Logging project means that everything can be pre-defined and the development team only has to
+                <p><b>Status - In Progress</b><br>Serilog has been used to replace the built in logger because it is
+                    more Flexible and better logging descriptions.
+                <ul>
+                    <li><b>Overview - </b>The App project is configured to read the configuration settings so as long as
+                        the appropriate Sink package is installed and the configuration is done then the logging will be
+                        done. Note all HTTP requests are logged automatically without the need to include the log
+                        entries in each controller.</li>
+                    <li><b>Sinks - </b>The main Sink (Serilog.Sinks.{Destination}) packages are below but the
+                        examples below are not exhaustive if your requirement is not accomodated below check the
+                        Serilog Documentation. some of the common Destinations are below :-
+                        <ol>
+                            <li><b>Console - </b>Command Console Window.</li>
+                            <li><b>Debug - </b>Debug Window.</li>
+                            <li><b>EventLog - </b>Directly To the Windows Event Viewer.</li>
+                            <li><b>Email - </b>a nominated Email address.</li>
+                            <li><b>File - </b>A Text file in either Text or JavaScript Object Notation (JSON)
+                                format.</li>
+                            <li><b>MSSQLServer - </b>MS SQL Server Database.</li>
+                        </ol>
+                    </li>
+                    <li><b>Configuration - </b>All the Destination Packages can be configured independently in
+                        appsettings.json, or its environment variable equivalent. This adds to the flexibility
+                        of Serilog, My personal approach is to use the environment appsettings file for
+                        configuration that is necessary for the solution while the appsettings.json file is used
+                        solely for the user options configuration.</li>
+                </ul>
+                The Logging project means that everything can be pre-defined and the development team only has to
                 deal with making the log entries in the solution.</p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
-                <p><b>Status - Done.<br>FrameWork - Xunit Project</b><br>In order to fully understand Unit Testing (UT) it is necessary to understand the basic principles of UT.  Testing has always been done in the Software development lifecycle UT is only one of the Later strategies <br>
-                    <ul>
-                        <li><b>History of Testing </b>initially testing was done using Dry Runs (pen and paper) very monotonous, laborious and time-consuming, as a result not very efficient. This was later improved in an attempt to auromate the process be writing specific methods to call the relevant method and test the output.  This approach was the predecessor to UT as we know it.</li>
-                        <li><b>Analogy of Software defences </b>it is reasonable to compare software protection with an animal such as a crustacion, shell-fish or insect. Which all have protective outer layers and soft (vulnerable) insides.  This strategy is also employed by the military for example armoured vehicles to protect the vulnerable service-personnel. The Job of the User Interface (UI) is to act as that hard exterior in order to protect the vulnerable Operating System (OS) this is where UT comes in.</li>
-                        <li><b>Software Vulnerabilities </b>Unscrupulous programmers use various means to exploit software by using methods which are in line with computer rules but the software was not designed to deal with causing the software to crash providing a chink in the armour of the UI enabling the Software to be exploited,  Such common methods are SQL Injection, Cross-Site Scripting, One-up One-down vulnerabilities to name but a few. As a result UT is a tool used to protect the software. This raisess the question how can we use UT to protect software <br> <ol>
-                            <li><b>Specification </b>all methods to be tested should be defined in the specification as a result each test can be wrote before the method being tested so the test is wrote to the specification NOT the method.</li>
-                            <li><b>Method </b>once the method has been wrote and complies with the test, The test can be revised by inspecting the source-code with a view to breaking the method (previously known as Testing to Destruction). All appropriate validation can be implemented as required in the method and test, tightening up any loose ends so to speak.</li>
-                            <li><b>Example of validation </b>the functionality to add two integers is really straight forward or so you might think "number1 + number2" however it is possible that the equation will not work because the computer has a Maximum value so such validation could be done to ensure the calculation is correct by introducing a 3rd variable so "total = number1 + number2" the validation could then be "if (number2 != total - number1) throw exception" the test would be changed to ensure the appropriate exception is thrown.</li>
-                        </ol></li>
-                        <li><b>Balanced Approached - </b>Tests should be wrote for methods which originate in the product and are dynamic(Can be changed)
-                        specification which outlines the parameters of the associated method. Only dynamic internal(Not external Libraries or Frameworks) methods should be tested.</li>
-                        <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are Testable (one unit of work meaning a method which in the past did several units of work then that method is not testable, however by breaking the method down into manageable components each component can be tested. As a result the quality of code is improved.</li>
-                        <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up, one down vulnerability" which in short enables code to be exploited when for example a loop does one too many or few iterations, if these can be exposed then the software is inherently more secure.</li>
-                        <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws attention to the change and means that both the test and change should be reviewwed as the test may be too strict or the change does in fact take the method outside of the specified parameters of the method meaning that potential issues are exposed. Whereby in the past this would have been missed.</li>
-                    </ul> 
-                    This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app project it uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in any future project also don't forget to update the GlobalUsings.cs to include new projects and/or folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in the Test Explorer. Fluent assertions provides meaningful results when run.
+                <p><b>Status - Done.<br>FrameWork - Xunit Project</b><br>In order to fully understand Unit Testing (UT)
+                    it is necessary to understand the basic principles of UT. Testing has always been done in the
+                    Software development lifecycle UT is only one of the Later strategies <br>
+                <ul>
+                    <li><b>History of Testing </b>initially testing was done using Dry Runs (pen and paper) very
+                        monotonous, laborious and time-consuming, as a result not very efficient. This was later
+                        improved in an attempt to auromate the process be writing specific methods to call the relevant
+                        method and test the output. This approach was the predecessor to UT as we know it.</li>
+                    <li><b>Analogy of Software defences </b>it is reasonable to compare software protection with an
+                        animal such as a crustacion, shell-fish or insect. Which all have protective outer layers and
+                        soft (vulnerable) insides. This strategy is also employed by the military for example armoured
+                        vehicles to protect the vulnerable service-personnel. The Job of the User Interface (UI) is to
+                        act as that hard exterior in order to protect the vulnerable Operating System (OS) this is where
+                        UT comes in.</li>
+                    <li><b>Software Vulnerabilities </b>Unscrupulous programmers use various means to exploit software
+                        by using methods which are in line with computer rules but the software was not designed to deal
+                        with causing the software to crash providing a chink in the armour of the UI enabling the
+                        Software to be exploited, Such common methods are SQL Injection, Cross-Site Scripting, One-up
+                        One-down vulnerabilities to name but a few. As a result UT is a tool used to protect the
+                        software. This raisess the question how can we use UT to protect software <br>
+                        <ol>
+                            <li><b>Specification </b>all methods to be tested should be defined in the specification as
+                                a result each test can be wrote before the method being tested so the test is wrote to
+                                the specification NOT the method.</li>
+                            <li><b>Method </b>once the method has been wrote and complies with the test, The test can be
+                                revised by inspecting the source-code with a view to breaking the method (previously
+                                known as Testing to Destruction). All appropriate validation can be implemented as
+                                required in the method and test, tightening up any loose ends so to speak.</li>
+                            <li><b>Example of validation </b>the functionality to add two integers is really straight
+                                forward or so you might think "number1 + number2" however it is possible that the
+                                equation will not work because the computer has a Maximum value so such validation could
+                                be done to ensure the calculation is correct by introducing a 3rd variable so "total =
+                                number1 + number2" the validation could then be "if (number2 != total - number1) throw
+                                exception" the test would be changed to ensure the appropriate exception is thrown.</li>
+                        </ol>
+                    </li>
+                    <li><b>Balanced Approached - </b>Tests should be wrote for methods which originate in the product
+                        and are dynamic(Can be changed)
+                        specification which outlines the parameters of the associated method. Only dynamic internal(Not
+                        external Libraries or Frameworks) methods should be tested.</li>
+                    <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are
+                        Testable (one unit of work meaning a method which in the past did several units of work then
+                        that method is not testable, however by breaking the method down into manageable components each
+                        component can be tested. As a result the quality of code is improved.</li>
+                    <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up,
+                        one down vulnerability" which in short enables code to be exploited when for example a loop does
+                        one too many or few iterations, if these can be exposed then the software is inherently more
+                        secure.</li>
+                    <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws
+                        attention to the change and means that both the test and change should be reviewwed as the test
+                        may be too strict or the change does in fact take the method outside of the specified parameters
+                        of the method meaning that potential issues are exposed. Whereby in the past this would have
+                        been missed.</li>
+                </ul>
+                This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app
+                project it uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent
+                    Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in
+                any future project also don't forget to update the GlobalUsings.cs to include new projects and/or
+                folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in
+                the Test Explorer. Fluent assertions provides meaningful results when run.
                 </p>
                 <p>The Naming convention of unit testing is a s below
                 <ol>
