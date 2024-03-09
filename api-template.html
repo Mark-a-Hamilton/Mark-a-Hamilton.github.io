@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Hamilton BSc. (Hons. S/W Eng.)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" />
+    <link rel="stylesheet" href=".\css\superhero.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href=".\css\layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href=".\css\style.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg header-center">
+        <h1>Mark Hamilton</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
+                aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" onclick="SwitchMode()" id="flexSwitchCheckDefault" />
+                <label class="form-check-label" for="flexSwitchCheckDefault"><i
+                        class="nav-link bi bi-circle-half"></i></label>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarColor04">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href=".\index.html"><i class="bi bi-house-door-fill"></i>
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h2 class="header-center">API Template</h2>
+        <hr>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#oview" aria-selected="true" role="tab">Overview</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#reasoning" aria-selected="false" tabindex="-1" role="tab">Reasoning</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id3" aria-selected="false" tabindex="-1" role="tab">ID3</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id4" aria-selected="false" tabindex="-1" role="tab">ID4</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id5" aria-selected="false" tabindex="-1" role="tab">ID5</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id6" aria-selected="false" tabindex="-1" role="tab">ID6</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="oview" class="tab-pane fade show active" role="tabpanel">
+                <p>
+                    The purpose of the API Template is to provide a starting point when creating a new API the default Minimal API really needs some configuration in order to arrive at a meaningful starting point so the only thing to do is to concentrate on the meat of the API.  The API-Template uses a restructured minimal API base, the default API is configured to allow it to connect to a SQL Server Database Log table, Endpoints provided, As swagger / OpenAPI is used by default and enables testing and documentation of the API.  
+                </p>
+            </div>
+            <div id="reasoning" class="tab-pane fade" role="tabpanel">
+                <p>
+                    Carrying on from the Overview there are many reasons why I have wrote an API Template so lets just list them here
+                </p>
+                <ol>
+                    <li><b>Understanding</b> - As I wanted to Understand the intricacies of API's, previously I had only tested existing API's.</li>
+                    <li><b>Starting Point</b> - On gaining an understanding I soon realised that there was quite a bit of configuration in order to get to a point where I could start coding to access the Database Table, Also known as the starting point.  The reason why this is important is because if developers waste time by repeating necessary steps thus making then less efficient whereby a template will ensure that the developers only have to concentrate on the functionality of yjr Minimal API.</li>
+                    <li><b>Uniformity</b> - </li>
+                    <li><b>Structure</b> - </li>
+                    <li><b>Useage</b> - Feel Free to Clone the API Template repository as it has the standard MIT License also it may be advantageous to adapt it based on your typical Use Case/</li>
+                </ol>
+            </div>
+            <div id="supplier" class="tab-pane fade" role="tabpanel">
+                <p>
+                </p>
+            </div>
+            <div id="strategy" class="tab-pane fade" role="tabpanel">
+                <p></p>
+            </div>
+            <div id="windows" class="tab-pane fade" role="tabpanel">
+                <p>
+                </p>
+            </div>
+            <div id="3rdpty" class="tab-pane fade" role="tabpanel">
+                <p>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"></script>
+    <script src=".\js\script.js"></script>
+</body>
+<footer>
+    <br> &copy;opyright - Mark Hamilton - All rights Reserved 2024<br>
+</footer>
+
+</html>
