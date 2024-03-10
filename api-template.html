@@ -44,54 +44,86 @@
         <hr>
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" data-bs-toggle="tab" href="#oview" aria-selected="true" role="tab">Overview</a>
+                <a class="nav-link active" data-bs-toggle="tab" href="#ovrvw" aria-selected="true"
+                    role="tab">Overview</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#reasoning" aria-selected="false" tabindex="-1" role="tab">Reasoning</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#strctr" aria-selected="false" tabindex="-1"
+                    role="tab">Structure</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#id3" aria-selected="false" tabindex="-1" role="tab">ID3</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#id4" aria-selected="false" tabindex="-1" role="tab">ID4</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#id5" aria-selected="false" tabindex="-1" role="tab">ID5</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#id6" aria-selected="false" tabindex="-1" role="tab">ID6</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#usg" aria-selected="false" tabindex="-1"
+                    role="tab">Usage</a>
             </li>
         </ul>
         <div id="myTabContent" class="tab-content">
-            <div id="oview" class="tab-pane fade show active" role="tabpanel">
+            <div id="ovrvw" class="tab-pane fade show active" role="tabpanel">
                 <p>
-                    The purpose of the API Template is to provide a starting point when creating a new API the default Minimal API really needs some configuration in order to arrive at a meaningful starting point so the only thing to do is to concentrate on the meat of the API.  The API-Template uses a restructured minimal API base, the default API is configured to allow it to connect to a SQL Server Database Log table, Endpoints provided, As swagger / OpenAPI is used by default and enables testing and documentation of the API.  
-                </p>
-            </div>
-            <div id="reasoning" class="tab-pane fade" role="tabpanel">
-                <p>
-                    Carrying on from the Overview there are many reasons why I have wrote an API Template so lets just list them here
+                    The purpose of the API Template is to provide a starting point when creating a new Minimal API
+                    (<b>Starting Paint </b> A position where all preliminary configuration has been completed, so that
+                    only coding required is to create the Endpoints and associated classes). The API-Template uses the
+                    minimal API base, then restructures it. The default API is configured to allow it to connect to a
+                    SQL Server Database, installs all necessary packages, Log table, Endpoints provided, As swagger /
+                    OpenAPI is used by default as it is Industry standard, enables testing and documentation of the API.
+                    <br> There are various reasons for the API Template, these are :-
                 </p>
                 <ol>
-                    <li><b>Understanding</b> - As I wanted to Understand the intricacies of API's, previously I had only tested existing API's.</li>
-                    <li><b>Starting Point</b> - On gaining an understanding I soon realised that there was quite a bit of configuration in order to get to a point where I could start coding to access the Database Table, Also known as the starting point.  The reason why this is important is because if developers waste time by repeating necessary steps thus making then less efficient whereby a template will ensure that the developers only have to concentrate on the functionality of yjr Minimal API.</li>
-                    <li><b>Uniformity</b> - </li>
-                    <li><b>Structure</b> - </li>
-                    <li><b>Useage</b> - Feel Free to Clone the API Template repository as it has the standard MIT License also it may be advantageous to adapt it based on your typical Use Case/</li>
+                    <li><b>Understanding</b> - Primarily to provide understanding of Minimal API's.</li>
+                    <li><b>Starting Point</b> - On gaining an understanding it was soon evident that quite a bit of
+                        configuration to get to a starting point. The reason why this is important is because if
+                        developers waste time doing unnecessary steps this makes then less efficient whereby a template
+                        will ensure that the developers only have to concentrate on the functionality of the Minimal
+                        API. Also the more coding that is done the more the code will deviate from the agreed standard,
+                        thus making maintaining / Developing code more of a problem</li>
+                    <li><b>Uniformity</b> - By keeping an agreed format between developers then all API's from whatever
+                        project by whichever developer can be easily maintained / developed providing the developer is
+                        familiar with the API-Template standard in place.</li>
+                    <li><b>Structure</b> - The main changes are the appsettings.json and Program.cs files have been
+                        amended, also a Library folder has been created which contains Contexts, Models, Endpoints &
+                        Filters sub-folders which is where the main code is done. See the "Structure" tab for details on
+                        the changes.
+                    </li>
+                    <li><b>Usage</b> - Feel Free to Clone the <a target="_blank"
+                            href="https://github.com/Mark-a-Hamilton/Api-Template">API-Template</a> repository as it has
+                        the standard MIT License also it may be advantageous to adapt it based on your typical Use Case.
+                        I'm sure that you can workout how to use the template but for the intricacies see the "Usage"
+                        tab.</li>
                 </ol>
             </div>
-            <div id="supplier" class="tab-pane fade" role="tabpanel">
+            <div id="strctr" class="tab-pane fade" role="tabpanel">
                 <p>
+                <ol>
+                    <li><b>Pre-Requistes -</b> In order to make this project feasible then Windows SQL Server (Express)
+                        & SQL Server Management Studio along with a database called "SolutionLog" which contains a "Log"
+                        table, must exist.</li>
+                    <li><b>Configuration files -</b>
+                        <ul>
+                            <li><b>appsettings.json -</b> Contains configuration that is used for non-critical settings
+                                which are usually cosmetic or optional functionality, as a result can be changed by
+                                non-technical staff. and will only change settings that have not already been set in
+                                other "appsettings.*.json" files.</li>
+                            <li><b>appsettings.{ENVIRONMENT VARIABLE}.json -</b>Contains configuration that is for
+                                critical settings and as a result should be changed by technical staff. the default file
+                                is "appsettings.Production.json" thus seperating the responsibilities and maintaining
+                                security.</li>
+                        </ul>
+                    </li>
+                    <li><b>Setup -</b> Program.cs - has been changed to remove the default (weatherforecat) project,
+                        gets the database connection string from the appropriate appsettings file, adds the endpoints to
+                        project while maintaining a sensible size Program.cs file. Adds the relevant packages to the
+                        project.</li>
+                    <li><b>Library Folders -</b> The main coding is done inside these folders :-
+                        <ul>
+                            <li><b>Contexts -</b>Contains the DatabaseContext.cs file which is where each model is linked to the appropriate Model using the "DBSet" keyword. With the tablename used as the context.</li>
+                            <li><b>Endpoints -</b>All the Endpoints should be located in here. Note Regions can be used to separate the Table Endpoints to keep the Endpoints structured.</li>
+                            <li><b>Models -</b>Each table in the database has a class defining a basic Model the naming convention is {TABLENAME}Model.cs so the log model is called the LogModel.cs class. the definition can be extracted from tablename design feature in SQL Server Management Studio.</li>
+                            <li><b>Filters -</b> Not Used but can be used in future, if complex validation rules are required.</li>
+                        </ul>
+                    </li>
+                </ol>
                 </p>
             </div>
-            <div id="strategy" class="tab-pane fade" role="tabpanel">
-                <p></p>
-            </div>
-            <div id="windows" class="tab-pane fade" role="tabpanel">
-                <p>
-                </p>
-            </div>
-            <div id="3rdpty" class="tab-pane fade" role="tabpanel">
+            <div id="usg" class="tab-pane fade" role="tabpanel">
                 <p>
                 </p>
             </div>
