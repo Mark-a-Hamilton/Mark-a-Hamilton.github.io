@@ -140,9 +140,17 @@
                 <p>
                     The purpose of this section is to expand on the Structure tab to explain how to change each area to make your specific Minimal API so assuming The Pre-requisites have been met and the Configuration files have been correctly configured all we have to do is add the Classes in the Library Folder.
                     <ul>
-                        <li><b>Contexts -</b>.</li>
+                        <li><b>Contexts -</b>The contexts refers to each model and each Model contains a method starting with <br> DbSet&#60LogModel&#62 Log { get; set; } .</li>
                         <li><b>Endpoints -</b>.</li>
-                        <li><b>Models -</b>.</li>
+                        <li><b>Models -</b> Each Table and view that requires endpoints creating should be created preferably in a separate file. The Model is essentially a definition and should contain all fields in the table / view with the appropriate type for each field is defined as a property in the class.  The easiest way to do this is by right clicking on the table / view in SQL Server Management Studio (SSMS) and selecting the "Design" option if so :- <br>
+                            Column Name = Id : Data Type = int : Allow nulls = false in SSMS Design View <br> 
+                            public int Id { get; set; } <br>
+                            Column Name = [Level] : Data Type = nvarchar(MAX) : Allow nulls = true in SSMS Design View <br>
+                            public string? Level { get; set; } <br>
+                        you get the idea, nothing complicated.
+
+
+                        </li>
                     </ul>
                 </p>
             </div>
