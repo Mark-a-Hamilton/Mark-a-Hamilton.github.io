@@ -55,6 +55,10 @@
                 <a class="nav-link" data-bs-toggle="tab" href="#usg" aria-selected="false" tabindex="-1"
                     role="tab">Usage</a>
             </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#tip" aria-selected="false" tabindex="-1"
+                    role="tab">Tip</a>
+            </li>
         </ul>
         <div id="myTabContent" class="tab-content">
             <div id="ovrvw" class="tab-pane fade show active" role="tabpanel">
@@ -102,8 +106,8 @@
                                 which are usually cosmetic or optional functionality, as a result can be changed by
                                 non-technical staff. and will only change settings that have not already been set in
                                 other "appsettings.*.json" files.</li>
-                            <li><b>appsettings.{ENVIRONMENT VARIABLE}.json -</b>Contains configuration that is for
-                                critical settings and as a result should be changed by technical staff. the default file
+                            <li><b>appsettings.{ENVIRONMENT VARIABLE}.json -</b> Contains configuration that is for
+                                critical settings and as a result should be changed by technical staff. The default file
                                 is "appsettings.Production.json" thus seperating the responsibilities and maintaining
                                 security.</li>
                         </ul>
@@ -114,10 +118,19 @@
                         project.</li>
                     <li><b>Library Folders -</b> The main coding is done inside these folders :-
                         <ul>
-                            <li><b>Contexts -</b>Contains the DatabaseContext.cs file which is where each model is linked to the appropriate Model using the "DBSet" keyword. With the tablename used as the context.</li>
-                            <li><b>Endpoints -</b>All the Endpoints should be located in here. Note Regions can be used to separate the Table Endpoints to keep the Endpoints structured.</li>
-                            <li><b>Models -</b>Each table in the database has a class defining a basic Model the naming convention is {TABLENAME}Model.cs so the log model is called the LogModel.cs class. the definition can be extracted from tablename design feature in SQL Server Management Studio.</li>
-                            <li><b>Filters -</b> Not Used but can be used in future, if complex validation rules are required.</li>
+                            <li><b>Contexts -</b>Contains the DatabaseContext.cs file which is where each model is
+                                linked to the appropriate Model using the "DBSet" keyword. With the tablename used as
+                                the context.</li>
+                            <li><b>Endpoints -</b>All the Endpoints should be located in here. Note Regions can be used
+                                to separate the Table Endpoints to keep the Endpoints structured. The code contains
+                                endpoints for the HTTP verbs GET, POST, PUT, PATCH & DELETE which work. This ultimately
+                                means that it is relatively simple to create new endpoints as required.</li>
+                            <li><b>Models -</b>Each table in the database has a class defining a basic Model the naming
+                                convention is {TABLENAME}Model.cs so the log model resides in the LogModel.cs class. the
+                                definition can be extracted from tablename design feature in SQL Server Management
+                                Studio. Note in this document I have concentrated on modelling tables however views can also be modelled in line with standard database design.</li>
+                            <li><b>Filters -</b> Not Used but can be used in future, if complex validation rules are
+                                required.</li>
                         </ul>
                     </li>
                 </ol>
@@ -125,6 +138,27 @@
             </div>
             <div id="usg" class="tab-pane fade" role="tabpanel">
                 <p>
+                    The purpose of this section is to expand on the Structure tab to explain how to change each area to make your specific Minimal API so assuming The Pre-requisites have been met and the Configuration files have been correctly configured all we have to do is add the Classes in the Library Folder.
+                    <ul>
+                        <li><b>Contexts -</b>.</li>
+                        <li><b>Endpoints -</b>.</li>
+                        <li><b>Models -</b>.</li>
+                    </ul>
+                </p>
+            </div>
+            <div id="tip" class="tab-pane fade" role="tabpanel">
+                <p>
+                    Doing this project I followed videos to arrive at a working Minimal API after copying stages in the
+                    videos to the letter or so I thought. When the project was first run I expected the same results as
+                    the videos, which was the swagger front end with each of the endpoints reflected. However, I got
+                    swagger front end but with a stack trace. So how did I come to the finished API-Template? Easy in 3
+                    steps :-
+                <ol>
+                    <li><b>Stack Trace - </b>Highlight and copy the entire stack trace.</li>
+                    <li><b>Artificial Intelligence (AI) - </b>Paste the Stack Trace into MS-Edge Co-Pilot.</li>
+                    <li><b>Fix - </b>Once Co-Pilot had explained the problem it was easy to fix.</li>
+                </ol>
+                This example demonstrates the power of AI, as most of my IT career has been in support which included analysing stack traces with no access to source code then it is clear how simply copying a stack trace into an AI tool improves the support service. 
                 </p>
             </div>
         </div>
