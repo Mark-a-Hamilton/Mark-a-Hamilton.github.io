@@ -52,7 +52,8 @@
                     role="tab">App</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#api" aria-selected="false" tabindex="-1" role="tab">Minimal API</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#api" aria-selected="false" tabindex="-1"
+                    role="tab">Minimal API</a>
             </li>
             <li class="nav-item" role="presentation">
                 <a class="nav-link" data-bs-toggle="tab" href="#log" aria-selected="false" tabindex="-1"
@@ -63,7 +64,8 @@
                     role="tab">Unit Testing</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#template" aria-selected="false" tabindex="-1" role="tab">Template</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#template" aria-selected="false" tabindex="-1"
+                    role="tab">Template</a>
             </li>
         </ul>
         <div id="myTabContent" class="tab-content">
@@ -77,15 +79,22 @@
                 </ol>
                 </p>
                 <p>
-                    The purpose of the Templates Solution is to provide a starting point for future projects, depending on the agreed standards. The Templates Solution contains several different templates, these are :-  
-                    <ol>
-                        <li><b>&ensp;Application&ensp;-&ensp;</b>The Application template incorporates the MVC framework with <a href="https://serilog.net/" target="_blank">Serilog</a> for logging, MS SQL Server database, not forgetting global exception handling, etc.&ensp;For further information see the "App" tab.</li>
-                        <li><b>&ensp;Minimal API&ensp;-&ensp;</b>.&ensp;This is one of the other startup Project and deals with Database access using <a
+                    The purpose of the Templates Solution is to provide a starting point for future projects, depending
+                    on the agreed standards. The Templates Solution contains several different templates, these are :-
+                <ol>
+                    <li><b>&ensp;Application&ensp;-&ensp;</b>The Application template incorporates the MVC framework
+                        with <a href="https://serilog.net/" target="_blank">Serilog</a> for logging, MS SQL Server
+                        database, not forgetting global exception handling, etc.&ensp;For further information see the
+                        "App" tab.</li>
+                    <li><b>&ensp;Minimal API&ensp;-&ensp;</b>.&ensp;This is one of the other startup Project and deals
+                        with Database access using <a
                             href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-8.0"
-                            target="_blank">OpenAPI / Swagger</a>.  For further information see the "Min API" tab.</li>
-                        <li><b>&ensp;Unit Testing&ensp;-&ensp;</b>The Unit Testing Template uses <a href="https://fluentassertions.com/introduction"
-                            target="_blank">Fluent Assertions</a> framework to test the application Project.&ensp;For further information see the "Unit Testing" tab.</li>
-                    </ol>
+                            target="_blank">OpenAPI / Swagger</a>. For further information see the "Min API" tab.</li>
+                    <li><b>&ensp;Unit Testing&ensp;-&ensp;</b>The Unit Testing Template uses <a
+                            href="https://fluentassertions.com/introduction" target="_blank">Fluent Assertions</a>
+                        framework to test the application Project.&ensp;For further information see the "Unit Testing"
+                        tab.</li>
+                </ol>
                 </p>
             </div>
             <div class="tab-pane fade" id="app" role="tabpanel">
@@ -98,20 +107,28 @@
                     code.</p>
             </div>
             <div class="tab-pane fade" id="api" role="tabpanel">
-                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br><b>&ensp;Framework&ensp;-&ensp;Web API Project</b><br>The purpose of the Minimal Application
+                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br><b>&ensp;Framework&ensp;-&ensp;Web API Project</b><br>The
+                    purpose of the Minimal Application
                     Programmable Interface is to provide a mechanism by which a request can be made to the database
                     securely. Without giving access to the database or divulging its structure unnecessarily, meaning
-                    you are in control of the Data source.  Especially, as the Project uses Swagger then the API calls can be tested and documneted in development mode, Each API can be as open or restricted as necessary to perform the required tasks for example a minimal API's can be produced for the same product with an Internal version for support and an External version a public user, thus ultimately protecting the database from malicious intent.</p>
+                    you are in control of the Data source. Especially, as the Project uses Swagger then the API calls
+                    can be tested and documneted in development mode, Each API can be as open or restricted as necessary
+                    to perform the required tasks for example a minimal API's can be produced for the same product with
+                    an Internal version for support and an External version a public user, thus ultimately protecting
+                    the database from malicious intent.</p>
             </div>
             <div class="tab-pane fade" id="log" role="tabpanel">
-                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br>Serilog has been used to replace the built in logger because it is
+                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br>Serilog has been used to replace the built in logger because
+                    it is
                     more Flexible and better logging descriptions.
                 <ul>
-                    <li>&ensp;<b>Overview&ensp;-&ensp;</b>The App project is configured to read the configuration settings so as long as
+                    <li>&ensp;<b>Overview&ensp;-&ensp;</b>The App project is configured to read the configuration
+                        settings so as long as
                         the appropriate Sink package is installed and the configuration is done then the logging will be
                         done. Note all HTTP requests are logged automatically without the need to include the log
                         entries in each controller.</li>
-                    <li>&ensp;<b>Sinks&ensp;-&ensp;</b>The main Sink (Serilog.Sinks.{Destination}) packages are below but the
+                    <li>&ensp;<b>Sinks&ensp;-&ensp;</b>The main Sink (Serilog.Sinks.{Destination}) packages are below
+                        but the
                         examples below are not exhaustive if your requirement is not accomodated below check the
                         Serilog Documentation. some of the common Destinations are below :-
                         <ol>
@@ -119,12 +136,14 @@
                             <li>&ensp;<b>Debug&ensp;-&ensp;</b>Debug Window.</li>
                             <li>&ensp;<b>EventLog&ensp;-&ensp;</b>Directly To the Windows Event Viewer.</li>
                             <li>&ensp;<b>Email&ensp;-&ensp;</b>a nominated Email address.</li>
-                            <li>&ensp;<b>File&ensp;-&ensp;</b>A Text file in either Text or JavaScript Object Notation (JSON)
+                            <li>&ensp;<b>File&ensp;-&ensp;</b>A Text file in either Text or JavaScript Object Notation
+                                (JSON)
                                 format.</li>
                             <li>&ensp;<b>MSSQLServer&ensp;-&ensp;</b>MS SQL Server Database.</li>
                         </ol>
                     </li>
-                    <li>&ensp;<b>Configuration&ensp;-&ensp;</b>All the Destination Packages can be configured independently in
+                    <li>&ensp;<b>Configuration&ensp;-&ensp;</b>All the Destination Packages can be configured
+                        independently in
                         appsettings.json, or its environment variable equivalent. This adds to the flexibility
                         of Serilog, My personal approach is to use the environment appsettings file for
                         configuration that is necessary for the solution while the appsettings.json file is used
@@ -134,96 +153,65 @@
                 deal with making the log entries in the solution.</p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
-                <p><b>Status - Done.<br>FrameWork - Xunit Project</b><br>In order to fully understand Unit Testing (UT)
-                    it is necessary to understand the basic principles of UT. Testing has always been done in the
-                    Software development lifecycle UT is only one of the Later strategies <br>
-                <ul>
-                    <li><b>History of Testing </b>initially testing was done using Dry Runs (pen and paper) very
-                        monotonous, laborious and time-consuming, as a result not very efficient. This was later
-                        improved in an attempt to auromate the process be writing specific methods to call the relevant
-                        method and test the output. This approach was the predecessor to UT as we know it.</li>
-                    <li><b>Analogy of Software defences </b>it is reasonable to compare software protection with an
-                        animal such as a crustacion, shell-fish or insect. Which all have protective outer layers and
-                        soft (vulnerable) insides. This strategy is also employed by the military for example armoured
-                        vehicles to protect the vulnerable service-personnel. The Job of the User Interface (UI) is to
-                        act as that hard exterior in order to protect the vulnerable Operating System (OS) this is where
-                        UT comes in.</li>
-                    <li><b>Software Vulnerabilities </b>Unscrupulous programmers use various means to exploit software
-                        by using methods which are in line with computer rules but the software was not designed to deal
-                        with causing the software to crash providing a chink in the armour of the UI enabling the
-                        Software to be exploited, Such common methods are SQL Injection, Cross-Site Scripting, One-up
-                        One-down vulnerabilities to name but a few. As a result UT is a tool used to protect the
-                        software. This raisess the question how can we use UT to protect software <br>
-                        <ol>
-                            <li>&ensp;<b>Specification </b>all methods to be tested should be defined in the specification as
-                                a result each test can be wrote before the method being tested so the test is wrote to
-                                the specification NOT the method.</li>
-                            <li>&ensp;<b>Method </b>once the method has been wrote and complies with the test, The test can be
-                                revised by inspecting the source-code with a view to breaking the method (previously
-                                known as Testing to Destruction). All appropriate validation can be implemented as
-                                required in the method and test, tightening up any loose ends so to speak.</li>
-                            <li>&ensp;<b>Example of validation </b>the functionality to add two integers is really straight
-                                forward or so you might think "number1 + number2" however it is possible that the
-                                equation will not work because the computer has a Maximum value so such validation could
-                                be done to ensure the calculation is correct by introducing a 3rd variable so "total =
-                                number1 + number2" the validation could then be "if (number2 != total - number1) throw
-                                exception" the test would be changed to ensure the appropriate exception is thrown.</li>
-                        </ol>
-                    </li>
-                    <li><b>Balanced Approached - </b>Tests should be wrote for methods which originate in the product
-                        and are dynamic(Can be changed)
-                        specification which outlines the parameters of the associated method. Only dynamic internal(Not
-                        external Libraries or Frameworks) methods should be tested.</li>
-                    <li><b>Encourage Good Coding Practices - </b>Unit Tests should only be done on methods which are
-                        Testable (one unit of work meaning a method which in the past did several units of work then
-                        that method is not testable, however by breaking the method down into manageable components each
-                        component can be tested. As a result the quality of code is improved.</li>
-                    <li><b>Expose Security Vulnerabilities - </b>The most common secutity vulnerability is the "one up,
-                        one down vulnerability" which in short enables code to be exploited when for example a loop does
-                        one too many or few iterations, if these can be exposed then the software is inherently more
-                        secure.</li>
-                    <li><b>Expose newly introduced problems - </b> If a change causes a test to fail this draws
-                        attention to the change and means that both the test and change should be reviewwed as the test
-                        may be too strict or the change does in fact take the method outside of the specified parameters
-                        of the method meaning that potential issues are exposed. Whereby in the past this would have
-                        been missed.</li>
-                </ul>
-                This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to the app
-                project it uses <a href="https://fluentassertions.com/introduction" target="_blank">Fluent
-                    Assertions</a> to define the criteria meaning that this is a good starting point for Unit Testing in
+                <p><br>&ensp;<b> FrameWork - Xunit Project & <a href="https://fluentassertions.com/introduction"
+                            target="_blank">Fluent
+                            Assertions</a>.
+                        <br>&ensp;</b> Tests :- Each class (This includes, Functionality, Validators,
+                    Exception Handlers, etc.) should have a test Class. These
+                    are usually located in the Domain class and should have a test Method. The proposed naming
+                    convention is as follows :- <br>
+                <ol>
+                    <li><b>Test Class name </b> = Class name&ensp;+&ensp;'Tests'.cs so if the class to be tested is
+                        Sample.cs the
+                        Test Class will be called SampleTests.cs</li>
+                    <li><b>Method name </b> = Method Name in the class with the same parameters with the return value.
+                        Method Name&ensp;+&ensp;'_'&ensp;+&ensp;Return type
+                        so a method with the return type 'string' and called SampleMethod(int input) is called
+                        SampleMethod_String.</li>
+                </ol>
+                &ensp;This Project approaches testing by having 2 Example Tests (1 Fact & 1 Theory) and is wired up to
+                the app
+                project it uses to define the criteria meaning that this is a good starting point for Unit Testing in
                 any future project also don't forget to update the GlobalUsings.cs to include new projects and/or
                 folders as required. To run you just have to "Run All Tests" from the "Test" menu and view the result in
                 the Test Explorer. Fluent assertions provides meaningful results when run.
                 </p>
-                <p>The Naming convention of unit testing is a s below
+                <p>
+                    &ensp; All software must meet two criteria, these are :-
                 <ol>
-                    <li>&ensp;<b>Unit Testing Project&ensp;-&ensp;</b>This is simply called Unit Testing.</li>
-                    <li>&ensp;<b>Project being tested&ensp;-&ensp;</b>This is a new folder called "UT.{Projectname}".</li>
-                    <li>&ensp;<b>Class being tested&ensp;-&ensp;</b>A Class be created within the project folder called
-                        "{ClassName}Tests". </li>
-                    <li>&ensp;<b>Method being Tested&ensp;-&ensp;</b>a method should be created with the name
-                        "{methodname}_{ReturnType}" this ensures all overloads can be tested independently.</li>
+                    <li><b>Functionality Requirements </b> - Unit Tests should Test every case scenario to ensure the
+                        functionailty is fully met, and some incorrectly called instances to ensure the software is
+                        robust.</li>
+                    <li><b>Robust </b> - software must be able to deal with all other scenarios for example by throwing
+                        appropiate exceptions and logging them
+                        the reason for this is to deal with any security issues / attempted security breaches.</li>
                 </ol>
-                The above naming convention allows a structure to the tests and indicates exactly what is being tested
-                in the results making life easier for developers. If you are new to Unit Testing I would suggest you
-                view a youtube video in conjunction with the examples in the start-template.UnitTesting project.
                 </p>
             </div>
             <div class="tab-pane fade" id="template" role="tabpanel">
                 <p>
                     How do you create a Template based on a Project?
-                    <ol>
-                        <li><b>&ensp;Clone Project&ensp;-&ensp;</b> Go to the Github repository and clone the project so that it exists locally. See Link <a href="https://www.youtube.com/watch?v=f6xc5Jg5Sy8" target="_blank">clone</a></li>
-                        <li><b>&ensp;Amend Project&ensp;-&ensp;</b> Make any changes to the project so that it meets your needs.</li>
-                        <li><b>&ensp;VS2022&ensp;-&ensp;</b> Navigate to Project > Export Template... </li>
-                        <li><b>&ensp;Window 1&ensp;-&ensp;</b> Select Template type Project and Project name from dropdown > Next button.</li>
-                        <li><b>&ensp;Window 2&ensp;-&ensp;</b> Enter the Template Name, Description & Location > Finish button.</li>
-                        <li><b>&ensp;Installed&ensp;-&ensp;</b> Template will now be visible when creating a new project. Alternatively, See link <a href="https://www.youtube.com/watch?v=UNYC53m3Lw8" target="_blank">create a template</a></li>
-                        <li><b>&ensp;Item Template&ensp;-&ensp;</b> Select the item option in window 1, and follow the wizard appropriately. </li>  
-                        <li><b>&ensp;Update&ensp;-&ensp;</b>After making changes re save the template with the same name and that template will be over-written</li>
-                        <!--<li><b>&ensp;&ensp;-&ensp;</b></li>-->
+                <ol>
+                    <li><b>&ensp;Clone Project&ensp;-&ensp;</b> Go to the Github repository and clone the project so
+                        that it exists locally. See Link <a href="https://www.youtube.com/watch?v=f6xc5Jg5Sy8"
+                            target="_blank">clone</a></li>
+                    <li><b>&ensp;Amend Project&ensp;-&ensp;</b> Make any changes to the project so that it meets your
+                        needs.</li>
+                    <li><b>&ensp;VS2022&ensp;-&ensp;</b> Navigate to Project > Export Template... </li>
+                    <li><b>&ensp;Window 1&ensp;-&ensp;</b> Select Template type Project and Project name from dropdown >
+                        Next button.</li>
+                    <li><b>&ensp;Window 2&ensp;-&ensp;</b> Enter the Template Name, Description & Location > Finish
+                        button.</li>
+                    <li><b>&ensp;Installed&ensp;-&ensp;</b> Template will now be visible when creating a new project.
+                        Alternatively, See link <a href="https://www.youtube.com/watch?v=UNYC53m3Lw8"
+                            target="_blank">create a template</a></li>
+                    <li><b>&ensp;Item Template&ensp;-&ensp;</b> Select the item option in window 1, and follow the
+                        wizard appropriately. </li>
+                    <li><b>&ensp;Update&ensp;-&ensp;</b>After making changes re save the template with the same name and
+                        that template will be over-written</li>
+                    <!--<li><b>&ensp;&ensp;-&ensp;</b></li>-->
 
-                    </ol>
+                </ol>
                 </p>
             </div>
         </div>
