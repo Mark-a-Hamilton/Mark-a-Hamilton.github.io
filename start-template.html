@@ -74,7 +74,20 @@
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade show active" id="oview" role="tabpanel">
-                <p>The following assumptions have been made, These are :-
+                <p><br>The aim ofthe Clean Architecture(CA) concept is to prevent duplicating code in multiple projects,
+                    which promotes good
+                    performance by reducing solution size, makes maintenance and development easier. This is because CA
+                    centralises the main
+                    business logic in the DOMAIN project which is then implemented in the appropriate projects for this
+                    reason every solution
+                    must contain the Domain Project. The other projects include User Interface (App Project),
+                    Infrastructure (MinAPI Project)
+                    using OpenAPI / Swagger and Unit Testing (UnitTesting Project). On creating a new solution the
+                    required projects must be
+                    added and the appropriate packages and references added. Once this is done the solution should be
+                    run before any
+                    development has taken place, to ensure that the projects are wired correctly.<br>The following
+                    assumptions have been made, These are :-
                 <ol>
                     <li>&ensp;<b>Microsoft Visual Studio 2022&ensp;-&ensp;</b>Has been installed.</li>
                     <li>&ensp;<b>Microssoft SQL Server&ensp;-&ensp;</b>Has been installed.</li>
@@ -98,11 +111,13 @@
                             href="https://fluentassertions.com/introduction" target="_blank">Fluent Assertions</a>
                         framework to test the application Project.&ensp;For further information see the "Unit Testing"
                         tab.</li>
+                    <li><b>&ensp;Domain&ensp;-&ensp;</b>Contains all the Business Logic, Models, etc.&ensp;For further
+                        information see the "Domain" tab</li>
                 </ol>
                 </p>
             </div>
             <div class="tab-pane fade" id="app" role="tabpanel">
-                <p><b>Status - Done.<br>FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that
+                <p><b><br>FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that
                     the MVC framework can be used to do all the tasks required in a project having said that the purpose
                     of the "App Project" is to act as a <b>start-up project and hub</b> so that everything goes through
                     the app but elements such as database access, logging & testing are done by specialist projects as
@@ -111,26 +126,26 @@
                     code.</p>
             </div>
             <div class="tab-pane fade" id="api" role="tabpanel">
-                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br><b>&ensp;Framework&ensp;-&ensp;Web API Project</b><br>The
-                    purpose of the Minimal Application
-                    Programmable Interface is to provide a mechanism by which a request can be made to the database
-                    securely. Without giving access to the database or divulging its structure unnecessarily, meaning
-                    you are in control of the Data source. Especially, as the Project uses Swagger then the API calls
-                    can be tested and documneted in development mode, Each API can be as open or restricted as necessary
-                    to perform the required tasks for example a minimal API's can be produced for the same product with
-                    an Internal version for support and an External version a public user, thus ultimately protecting
-                    the database from malicious intent.</p>
+                <p><br>&ensp;<b>Endpoints&ensp;:-&ensp;</b>All endpoints for each table depending on requirements, the
+                    class can be organised by using regions
+                    <br><b>&ensp;Framework&ensp;-&ensp;Web API Project</b><br>The purpose of the Minimal Application
+                    Programmable Interface project is to provide a mechanism to access the database securely. Without
+                    giving access to the database or divulging its structure unnecessarily, meaning you are in control
+                    of the Data source. Especially, as the Project uses Swagger then the API calls can be tested and
+                    documented in development mode, Each API can be as open or restricted as necessary to perform the
+                    required tasks for example minimal API's can be produced for the same solution with an Internal
+                    version for support and an External version a public user, thus ultimately protecting the database
+                    from outside sources with malicious intent and protecting corporate.
+                </p>
             </div>
             <div class="tab-pane fade" id="log" role="tabpanel">
-                <p><b>&ensp;Status&ensp;-&ensp;Done</b><br>Serilog has been used to replace the built in logger because
-                    it is
-                    more Flexible and better logging descriptions.
+                <p><br>Serilog has been used to replace the built in logger because it is more Flexible and uses better
+                    logging descriptions.
                 <ul>
-                    <li>&ensp;<b>Overview&ensp;-&ensp;</b>The App project is configured to read the configuration
-                        settings so as long as
+                    <li>&ensp;<b>Overview&ensp;-&ensp;</b>The App project is configured to use Serilog
                         the appropriate Sink package is installed and the configuration is done then the logging will be
                         done. Note all HTTP requests are logged automatically without the need to include the log
-                        entries in each controller.</li>
+                        entries in each endpoint or controller.</li>
                     <li>&ensp;<b>Sinks&ensp;-&ensp;</b>The main Sink (Serilog.Sinks.{Destination}) packages are below
                         but the
                         examples below are not exhaustive if your requirement is not accomodated below check the
@@ -141,28 +156,41 @@
                             <li>&ensp;<b>EventLog&ensp;-&ensp;</b>Directly To the Windows Event Viewer.</li>
                             <li>&ensp;<b>Email&ensp;-&ensp;</b>a nominated Email address.</li>
                             <li>&ensp;<b>File&ensp;-&ensp;</b>A Text file in either Text or JavaScript Object Notation
-                                (JSON)
-                                format.</li>
+                                (JSON) format.</li>
                             <li>&ensp;<b>MSSQLServer&ensp;-&ensp;</b>MS SQL Server Database.</li>
                         </ol>
                     </li>
                     <li>&ensp;<b>Configuration&ensp;-&ensp;</b>All the Destination Packages can be configured
-                        independently in
-                        appsettings.json, or its environment variable equivalent. This adds to the flexibility
+                        independently in appsettings.json, or its environment variable equivalent. This adds to the
+                        flexibility
                         of Serilog, My personal approach is to use the environment appsettings file for
                         configuration that is necessary for the solution while the appsettings.json file is used
                         solely for the user options configuration.</li>
+                    <li>
+                        &ensp;<b>Exception Handlers&ensp;-&ensp;</b>In the exception Handler class all the relevant
+                        exception Handlers should be defined as appropriate and this is a rolling class ensuring
+                        consistency throughout projects.
+                    </li>
                 </ul>
                 The Logging project means that everything can be pre-defined and the development team only has to
                 deal with making the log entries in the solution.</p>
             </div>
             <div class="tab-pane fade" id="domain" role="tabpanel">
+                <p><br>&nbsp;The Domain project contains all classes in the following categories.  The methods should be unit tested where necessary ensuring the solution is robust. 
+                    <ul>
+                        <li><b>Functions &nbsp;:-&nbsp;</b>This relates to required functionality of a web site, traditionally Javascript was used but a language such as C# is pr-compiled and hence is compressed and executes faster, not forgetting more secure.</li>
+                        <li><b>Models &nbsp;:-&nbsp;</b>These are models that are used by the solution and created during development, generated Models should not be moved to this location. </li>
+                        <li><b>Validators &nbsp;:-&nbsp;</b>These are classes that applies the rules for the endpoints used by the solution.</li>
+                    </ul>
+                    
+                    
+                    
 
+                </p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
                 <p><br>&ensp;<b> FrameWork - Xunit Project & <a href="https://fluentassertions.com/introduction"
-                            target="_blank">Fluent
-                            Assertions</a>.
+                            target="_blank">Fluent Assertions</a>.
                         <br>&ensp;</b> Tests :- Each class (This includes, Functionality, Validators,
                     Exception Handlers, etc.) should have a test Class. These
                     are usually located in the Domain class and should have a test Method. The proposed naming
@@ -197,7 +225,7 @@
             </div>
             <div class="tab-pane fade" id="template" role="tabpanel">
                 <p>
-                    How do you create a Template based on a Project?
+                    <br>&nbsp;How do you create a Template based on a Project?
                 <ol>
                     <li><b>&ensp;Clone Project&ensp;-&ensp;</b> Go to the Github repository and clone the project so
                         that it exists locally. See Link <a href="https://www.youtube.com/watch?v=f6xc5Jg5Sy8"
