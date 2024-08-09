@@ -117,13 +117,18 @@
                 </p>
             </div>
             <div class="tab-pane fade" id="app" role="tabpanel">
-                <p><b><br>FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that
+                <p><b><br>&ensp;FrameWork - Models-Views-Controllers (MVC) Project</b><br>It is fair to say that
                     the MVC framework can be used to do all the tasks required in a project having said that the purpose
                     of the "App Project" is to act as a <b>start-up project and hub</b> so that everything goes through
                     the app but elements such as database access, logging & testing are done by specialist projects as
                     and when required which provides consistency throughout solutions and projects within the solution.
                     The App project contains the Models which can be created from either an existing database or from
-                    code.</p>
+                    code.<br>
+                    <ul>
+                        <li><b>&ensp;Models&ensp; :-&ensp;</b>Have been moved to the Domain Project.</li>
+                        <li><b>&ensp;Views&ensp; :-&ensp;</b> These are all the Front end HTML5 files (GUI).</li>
+                        <li><b>&ensp;Controllers&ensp; :-&ensp;</b>Again the controllers for each screen.</li>
+                    </ul></p>
             </div>
             <div class="tab-pane fade" id="api" role="tabpanel">
                 <p><br>&ensp;<b>Endpoints&ensp;:-&ensp;</b>All endpoints for each table depending on requirements, the
@@ -189,7 +194,7 @@
                 </p>
             </div>
             <div class="tab-pane fade" id="utest" role="tabpanel">
-                <p><br>&ensp;<b> FrameWork - Xunit Project & <a href="https://fluentassertions.com/introduction"
+                <p><br>&ensp;<b> FrameWork - Xunit & <a href="https://fluentassertions.com/introduction"
                             target="_blank">Fluent Assertions</a>.
                         <br>&ensp;</b> Tests :- Each class (This includes, Functionality, Validators,
                     Exception Handlers, etc.) should have a test Class. These
