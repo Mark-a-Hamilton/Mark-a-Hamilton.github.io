@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Hamilton</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" />
+    <link rel="stylesheet" href=".\css\superhero.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href=".\css\layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href=".\css\style.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg header-center">
+        <h1>Mark Hamilton BSc. (Hons. S/W Eng.)</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
+                aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" onclick="SwitchMode()" id="flexSwitchCheckDefault" />
+                <label class="form-check-label" for="flexSwitchCheckDefault"><i
+                        class="nav-link bi bi-circle-half"></i></label>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarColor04">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href=".\index.html"><i class="bi bi-house-door-fill"></i>
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h2 class="header-center">Web Technologies</h2>
+        <hr>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-bs-toggle="tab" href="#id1" aria-selected="true" role="tab">OverView</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id2" aria-selected="false" tabindex="-1"
+                    role="tab">HTML5</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id3" aria-selected="false" tabindex="-1"
+                    role="tab">CSS3</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id4" aria-selected="false" tabindex="-1"
+                    role="tab">Web Assemblies</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="#id5" aria-selected="false" tabindex="-1"
+                    role="tab">Python</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div id="id1" class="tab-pane fade show active" role="tabpanel">
+                <p>On no account would I claim to be a 'Guru' of any web technology,&nbsp; However, &nbsp;having said that I have wrote this entire
+                site from scratch using online resources such as bootswatch, &nbsp;JQuery, &nbsp;Bootstrap, etc.&nbsp;&nbsp; combined with my knowledge of Web technologies & ability to research then apply what I need as and when required.&nbsp;&nbsp; As a result I feel that I have proved
+                that I have the abillty to move into a web development role.<br /><br />Note:&nbsp; As HTML5 & CSS3 have continually evolving specifications and as a result will always need researching,&nbsp; this isn't a problem for me.</p>
+            </div>
+            <div id="id2" class="tab-pane fade" role="tabpanel">
+                <p>The prime objective of HTML is to provide the page content and structure,&nbsp; these are not particularly complicated but having said that HTML5 is becoming more powerful.&nbsp;&nbsp; For example the best addition in my opinion to HTML5 is the introduction of 'Event Listeners' such as 'OnClick'.&nbsp;&nbsp; These enable a routine to be triggered based on a single event. &nbsp;&nbsp;Not forgetting that Javascript (JS) scripts usually has the event listener wrote into the script so these JS scripts can be simplified and made more efficient as the JS event listener is effectively redundant.
+                </p>
+            </div>
+            <div id="id3" class="tab-pane fade" role="tabpanel">
+                <p>This is another evolving technology and serves the purpose of formatting a web page.&nbsp;&nbsp; Grid and Flexbox make using
+                CSS3 a lot more straight forward and adds to the overall power of current web technologies.&nbsp;&nbsp; Again as there are CSS
+                libraries online it is possible to use one of these pre coded libraries then add to the functionality by using a custom
+                css file. &nbsp;&nbsp; An example of this is that this page uses "superhero.min.css" as the base library,&nbsp; then the
+                "layout.css" to make the changes to the format as required.&nbsp;&nbsp; Because CSS files are prioritised on position the
+                "layout.css" overrides the "superhero.min.css" should the settings exist in that file.</p>
+            </div>
+            <div id="id4" class="tab-pane fade" role="tabpanel">
+                <p>Rather than Use languages such as Javascript (JS) I would prefer to use a professional language that is compiled such as
+                C#.&nbsp; &nbsp;My reasoning is because JS can be disabled programmatically and as a result prevent hackers from exploiting JS
+                vulnerabilities keeping the site more secure also the compiled code is not readable so is more secure.&nbsp;&nbsp; Also JS has a
+                performance hit so slows web sites down,&nbsp; As modern Browsers also support web assemblies it seems to be the way forward.</p>
+            </div>
+            <div id="id5" class="tab-pane fade" role="tabpanel">
+                <p>This is a common language for current web sites it is Object Oriented and easy to learn so essentially is easy to
+                translate into a language such as C#.&nbsp;&nbsp; Having said that it is worth noting that the method of coding has changed over the
+                years,&nbsp; for example in times gone by programmers would try and make code complex in order to "show-off" their programming
+                prowess.&nbsp; &nbsp;The impact of this is that legacy code may use more code than required and as a result be less efficient, so in
+                my opinion it is always worth refactoring code as this should not change the functionality but can impact the
+                performance dramatically whether this is the file size of the code, &nbsp;the performance or even both.&nbsp;&nbsp; This is something I
+                can do.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"></script>
+    <script src=".\js\script.js"></script>
+</body>
+<footer>
+    <br> &copy;opyright - Mark Hamilton - All rights Reserved 2024<br>
+</footer>
+
+</html>
