@@ -7,3 +7,7 @@
 .tab-pane {
     margin: 1%;
 }
+
+.dropdown-header {
+    color: cyan;
+}
