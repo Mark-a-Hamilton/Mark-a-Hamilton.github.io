@@ -1,11 +1,17 @@
 /* My Class Selectors */
+
 .header-center {
     justify-content: center;
     text-align: center;
 }
 
-.tab-pane {
+.tab-pane,
+.accordion {
     margin: 1%;
+}
+
+.date {
+    width: 100px;
 }
 
 .dropdown-header {
