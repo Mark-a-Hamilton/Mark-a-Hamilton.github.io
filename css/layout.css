@@ -1,5 +1,4 @@
-/* My Class Selectors */
-
+/* Class Selectors */
 .header-center {
     justify-content: center;
     text-align: center;
@@ -14,10 +13,15 @@
     width: 100px;
 }
 
+.desc {
+    width: 750px;
+}
+
 .dropdown-header {
     color: cyan;
 }
 
+/* HTML Tag Selectors */
 footer {
     margin-left: 0.5%;
 }
