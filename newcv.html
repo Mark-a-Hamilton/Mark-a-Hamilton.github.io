@@ -202,240 +202,78 @@
                     </div>
                 </div>
             </div>
+<!-- Accordian Item: Education, certs & technical skills -->
+<!-- Accordion item for Education & Technical Skills -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingEdu">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEdu"
+            aria-expanded="true" aria-controls="collapseEdu">
+            Education & Technical Skills
+        </button>
+    </h2>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Education, Qualifications & Technical Skills
+    <div id="collapseEdu" class="accordion-collapse collapse show" aria-labelledby="headingEdu"
+        data-bs-parent="#mainAccordion">
+        <div class="accordion-body">
+
+            <!-- Tabs inside accordion -->
+            <ul class="nav nav-tabs" id="eduTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education"
+                        type="button" role="tab">
+                        Education & Qualifications
                     </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accrdn-cv">
-                    <div class="accordion-body">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" data-bs-toggle="tab" href="#education"
-                                        aria-selected="true" role="tab">Education & Qualifications</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#tech" aria-selected="false"
-                                        tabindex="-1" role="tab">Technical Skills</a>
-                                </li>
-                            </ul>
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade show active" id="education" role="tabpanel">
-                                    <p>
-                                    <!-- TEST -->
-                                    <div class="tab-content" id="educationTabsContent">-->
-                                        <!-- Professional Certifications tab -->
-                                        <div class="tab-pane fade show active" id="certs" role="tabpanel">
-                                            <div class="card border-info shadow-sm mb-4">
-                                                <div class="card-header bg-info text-white">
-                                                    <h5><i class="bi bi-patch-check-fill me-2"></i>Professional
-                                                        Certifications</h5>
-                                                </div>
-                                                <div class="card-body">
-                                                    <table class="table table-bordered table-striped table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="header-center">From</th>
-                                                                <th class="header-center">To</th>
-                                                                <th>Description</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="date">00-10-2014</td>
-                                                                <td class="date">22-02-2022</td>
-                                                                <td class="desc">Annual Oracle Certifications</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-00-2008</td>
-                                                                <td>00-00-2012</td>
-                                                                <td>XStore (Technical Essentials)</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-00-2008</td>
-                                                                <td>03-03-2012</td>
-                                                                <td>MCTS 70-680 Windows 7 Configuration (Expired)</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-00-2008</td>
-                                                                <td>00-00-2012</td>
-                                                                <td>SQL Server T-SQL Basic & Advanced</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button"
+                        role="tab">
+                        Technical Skills
+                    </button>
+                </li>
+            </ul>
 
-                                        <!-- Academic Qualifications tab -->
-                                        <div class="tab-pane fade" id="academic" role="tabpanel">
-                                            <div class="card border-warning shadow-sm mb-4">
-                                                <div class="card-header bg-warning text-dark">
-                                                    <h5><i class="bi bi-mortarboard-fill me-2"></i>Academic
-                                                        Qualifications</h5>
-                                                </div>
-                                                <div class="card-body">
-                                                    <table class="table table-bordered table-striped table-hover mb-0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="header-center">From</th>
-                                                                <th class="header-center">To</th>
-                                                                <th>Description</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>00-09-1995</td>
-                                                                <td>00-07-1999</td>
-                                                                <td>Sheffield Hallam University B.Sc. in Computing
-                                                                    (Hons. S/W Eng.)</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-09-1993</td>
-                                                                <td>00-07-1995</td>
-                                                                <td>Rother Valley College ACCESS Course - BTEC in
-                                                                    Computer Studies - COBOL</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-09-1989</td>
-                                                                <td>00-03-1990</td>
-                                                                <td>Shirecliffe College - City & Guilds (Computer
-                                                                    Literacy)</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-09-1986</td>
-                                                                <td>00-05-1987</td>
-                                                                <td>Kalamazoo - Computer programming - COBOL</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>00-09-1980</td>
-                                                                <td>00-06-1985</td>
-                                                                <td>School & Various Courses</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                   <</div>
+            <!-- Tab content -->
+            <div class="tab-content pt-3" id="eduTabsContent">
 
-                                    <!-- END TEST -->
-                                    <table>
-                                        <tr>
-                                            <th class="header-center">From </th>
-                                            <th class="header-center">To </th>
-                                            <th>Description</th>
-                                        </tr>
-                                        <!--<tr>
-                                            <td class="date">00-10-2014</td>
-                                            <td class="date">22-02-2022</td>
-                                            <td class="desc">Annual Oracle Certifications</td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-00-2008</td>
-                                            <td>00-00-2012</td>
-                                            <td>XStore (Technical Essentials)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-00-2008</td>
-                                            <td>03-03-2012</td>
-                                            <td>MCTS 70-680 Windows 7 Configuration (Expired)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-00-2008</td>
-                                            <td>00-00-2012</td>
-                                            <td>SQL Server T-SQL Basic & Advanced</td>
-                                        </tr>-->
-                                        <tr>
-                                            <td>00-09-1995</td>
-                                            <td>00-07-1999</td>
-                                            <td>Sheffield Hallam University B.Sc. in Computing (Hons.
-                                                S/W Eng.)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-09-1993</td>
-                                            <td>00-07-1995</td>
-                                            <td>Rother Valley College ACCESS Course - BTEC in Computer
-                                                Studies - COBOL</td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-09-1989</td>
-                                            <td>00-03-1990</td>
-                                            <td>Shirecliffe College - City & Guilds (Computer Literacy)
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-09-1986</td>
-                                            <td>00-05-1987</td>
-                                            <td>Kalamazoo - Computer programming - COBOL
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>00-09-1980</td>
-                                            <td>00-06-1985</td>
-                                            <td>School & Various Courses</td>
-                                        </tr>
-                                    </table>
-                                    </p>
-                                </div>
-                                <div class="tab-pane fade" id="tech" role="tabpanel">
-                                    <p>
-                                    <table>
-                                        <tr>
-                                            <th width="200px">Programming Languages</th>
-                                            <td> COBOL, C Family (including C++, C#, Java, etc.), Visual Basic,
-                                                Foxpro,
-                                                MS Frameworks, Python, etc.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Web Technologies</th>
-                                            <td> MS Visual Studio 2022, XAMPP, HTTP(S), HTML5, CSS3, XML,
-                                                JavaScript,
-                                                PHP, Performance, Security & Unit Testing.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Methodologies</th>
-                                            <td> Procedural & Object-Oriented Programming.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Databases</th>
-                                            <td> SQL Server(SQL Server Management Studio), Oracle Database (Oracle
-                                                Developer) & RDBMS Design.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Operating Systems</th>
-                                            <td> UNIX, LINUX(Kali), XENIX, DOS & Windows.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Remote Access Tools</th>
-                                            <td> Remote Desktop, PCAnywhere, VNC, Bomgar, Teamviewer, etc.</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Other Technologies</th>
-                                            <td> Sage CASE(Computer Aided Software Engineering) tools 2000, Many
-                                                years Commercial Support Experience and understanding of networking
-                                                (TCP/IP) & Github.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Note</th>
-                                            <td>I’m willing and able to add to my current Portfolio to fit any
-                                                future
-                                                role.</td>
-                                        </tr>
-                                    </table>
-                                    </p>
-                                </div>
-                            </div>
-                        </ul>
+                <!-- Education & Qualifications tab-pane -->
+                <div class="tab-pane fade show active" id="education" role="tabpanel">
+
+                    <!-- Card: Professional Certifications -->
+                    <div class="card border-info shadow-sm mb-4">
+                        <div class="card-header bg-info text-white">
+                            <h5><i class="bi bi-patch-check-fill me-2"></i>Professional Certifications</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Certifications Table -->
+                            <!-- [Insert Certs table here] -->
+                        </div>
                     </div>
+
+                    <!-- Card: Academic Qualifications -->
+                    <div class="card border-warning shadow-sm mb-4">
+                        <div class="card-header bg-warning text-dark">
+                            <h5><i class="bi bi-mortarboard-fill me-2"></i>Academic Qualifications</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Academic Table -->
+                            <!-- [Insert Academic table here] -->
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Technical Skills tab-pane -->
+                <div class="tab-pane fade" id="skills" role="tabpanel">
+                    <!-- Add your technical skills content here -->
+                </div>
+
             </div>
+
+        </div>
+    </div>
+</div>
+
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
