@@ -137,13 +137,14 @@
             </div>
             <!-- Accordion Item: Contact Details -->
             <div class="accordion-item" id="contact">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header" id="headingContact">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-parent="#accrdn-cv" data-bs-target="#collapseContact">
+                        data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
                         Personal / Contact Details
                     </button>
                 </h2>
-                <div id="collapseContact" class="accordion-collapse collapse">
+                <div id="collapseContact" class="accordion-collapse collapse" aria-labelledby="headingContact"
+                    data-bs-parent="#accrdn-cv">
                     <div class="accordion-body">
 
                         <!-- Info Panel -->
