@@ -9,4 +9,14 @@ table td {
     vertical-align: middle;
 }
 
+.badge-gallery a {
+    display: inline-block;
+    width: auto;
+}
+
+.badge-thumb {
+    max-width: 120px;
+    width: 100%;
+}
+
 
