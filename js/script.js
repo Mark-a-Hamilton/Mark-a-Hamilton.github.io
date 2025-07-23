@@ -9,10 +9,14 @@ function SwitchMode() {    // Function to switch between "light" and "dark" mode
 };
 
 function showBadgeModal(title, imagePath) {
-    document.getElementById('badgeModalLabel').textContent = title;
-    const image = document.getElementById('badgeModalImage');
-    image.src = imagePath;
-    image.alt = `${title} Badge Full View`;
     const badgeModal = new bootstrap.Modal(document.getElementById('badgeModal'));
+    const image = document.getElementById('badgeModalImage');
+
+    image.src = ''; // Clear previous src to avoid ghosting
+    image.alt = `${title} Badge Full View`;
+    image.src = imagePath;
+    document.getElementById('badgeModalLabel').textContent = title;
+
     badgeModal.show();
 };
+
