@@ -18,4 +18,10 @@ table td {
     width: 100%;
 }
 
+.badge-card {
+  width: 140px;
+  cursor: pointer;
+  text-align: center;
+}
+
 
