@@ -21,10 +21,21 @@ function showBadgeModal(title, imagePath) {
 };
 
 const badges = [
-    { src: "images/logging-legend.jpg", alt: "Logging Legend", title: "Logging Legend" },
-    { src: "images/7-day-streak.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
-    { src: "images/www.jpg", alt: "World Wide Web", title: "World Wide Web" },
-    // Add others here...
+    { src: "Images/logging-legend.jpg", alt: "Logging Legend", title: "Logging Legend" },
+    { src: "Images/7-day-streak.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
+    { src: "Images/WorldWideWeb.jpg", alt: "World Wide Web", title: "World Wide Web" },
+    { src: "Images/Webbed.jpg", alt: "Webbed", title: "Webbed" },
+    { src: "Images/Terminalled.jpg", alt: "CAT Linux", title: "CAT Linux" },
+    { src: "Images/LinuxPrivEsc.jpg", alt: "Linux Privilege Escalation", title: "Linux Privilege Escalation" },
+    { src: "Images/30DayStreak.jpg", alt: "30 Day Streak", title: "30 Day Streak" },
+    { src: "Images/SecurityAwareness.jpg", alt: "Security Awareness", title: "Security Awareness" },
+    { src: "Images/Blue.jpg", alt: "Blue", title: "Blue" },
+    { src: "Images/IntroToSecurityEngineering.jpg", alt: "Introduction to Security Engineering", title: "Introduction to Security Engineering" },
+    { src: "Images/OWasp10.jpg", alt: "OWASP Top 10", title: "OWASP Top 10" },
+    { src: "Images/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
+    { src: "Images/90DayStreak.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
+    { src: "Images/SQL_Slayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
+    { src: "Images/180DayStreak.jpg", alt: "180 Day Streak", title: "180 Day Streak" }
 ];
 
 function renderBadges(badges) {
