@@ -22,6 +22,10 @@ table td {
   width: 140px;
   cursor: pointer;
   text-align: center;
+};
+
+#badge-container li::before {
+    content: none !important;
 }
 
 
