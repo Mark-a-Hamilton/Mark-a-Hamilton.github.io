@@ -27,4 +27,16 @@ const badges = [
     // Add others here...
 ];
 
+function renderBadges(badges) {
+    const container = document.getElementById("badge-container");
+    badges.forEach(badge => {
+        const img = document.createElement("img");
+        img.src = badge.src;
+        img.alt = badge.alt;
+        img.title = badge.title;
+        img.className = "img-fluid rounded border shadow-sm";
+        container.appendChild(img);
+    });
+};
+
 
