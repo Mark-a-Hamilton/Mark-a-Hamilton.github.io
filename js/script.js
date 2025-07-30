@@ -20,3 +20,11 @@ function showBadgeModal(title, imagePath) {
     badgeModal.show();
 };
 
+const badges = [
+    { src: "images/logging-legend.jpg", alt: "Logging Legend", title: "Logging Legend" },
+    { src: "images/7-day-streak.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
+    { src: "images/www.jpg", alt: "World Wide Web", title: "World Wide Web" },
+    // Add others here...
+];
+
+
