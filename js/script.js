@@ -38,7 +38,7 @@ const badges = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () { renderBadges(badges); });
-
+/*
 function renderBadges(badges) {
     const container = document.getElementById("badge-container");
     container.innerHTML = "";
@@ -68,3 +68,34 @@ function renderBadges(badges) {
         });
     });
 };
+*/
+function renderBadges(badges) {
+    const container = document.getElementById("badge-container");
+    container.innerHTML = "";
+
+    badges.forEach(badge => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "badge-wrapper";
+        wrapper.style.cursor = "pointer";
+
+        const img = document.createElement("img");
+        img.src = badge.src;
+        img.alt = badge.alt;
+        img.title = badge.title;
+        img.className = "img-fluid rounded border shadow-sm";
+
+        wrapper.appendChild(img);
+        container.appendChild(wrapper);
+
+        // Modal activation
+        wrapper.addEventListener("click", () => {
+            document.getElementById("badgeModalLabel").innerText = badge.title;
+            const modalImg = document.getElementById("modalBadgeImage");
+            modalImg.src = badge.src;
+            modalImg.alt = badge.alt;
+
+            const modal = new bootstrap.Modal(document.getElementById("badgeModal"));
+            modal.show();
+        });
+    });
+}
