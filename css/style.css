@@ -26,6 +26,8 @@ table td {
 
 #badge-container li::before {
     content: none !important;
+};
+
+.primary-color {
+    color: var(--bs-primary);
 }
-
-
