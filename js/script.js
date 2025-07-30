@@ -38,7 +38,7 @@ const badges = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () { renderBadges(badges); });
-/*
+
 function renderBadges(badges) {
     const container = document.getElementById("badge-container");
     container.innerHTML = "";
@@ -68,7 +68,8 @@ function renderBadges(badges) {
         });
     });
 };
-*/
+
+/*
 function renderBadges(badges) {
     const container = document.getElementById("badge-container");
     container.innerHTML = "";
@@ -99,3 +100,4 @@ function renderBadges(badges) {
         });
     });
 }
+*/
