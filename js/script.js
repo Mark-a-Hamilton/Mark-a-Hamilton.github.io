@@ -19,7 +19,7 @@ function showBadgeModal(title, imagePath) {
 };
 
 const badges = [
-    { src: "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4077834", alt: "Current Status", title: "Current Status" },
+    { src: "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4077834", alt: "  Current Status", title: "  Current Status" },
     { src: "Images/LoggingLegend.jpg", alt: "Logging Legend", title: "Logging Legend" },
     { src: "Images/7.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
     { src: "Images/www.jpg", alt: "World Wide Web", title: "World Wide Web" },
