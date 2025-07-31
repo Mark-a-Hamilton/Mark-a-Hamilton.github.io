@@ -51,7 +51,7 @@ function renderBadges(badges) {
         img.src = badge.src;
         img.alt = badge.alt;
         img.title = badge.title;
-        img.className = "img-fluid rounded border shadow-sm";
+        img.className = "img-fluid rounded border shadow-sm badge-thumb";
 
         wrapper.appendChild(img);
         container.appendChild(wrapper);

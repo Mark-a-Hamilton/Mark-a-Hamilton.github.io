@@ -14,19 +14,31 @@ table td {
 }
 
 .badge-thumb {
-    max-width: 120px;
-    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.badge-thumb:hover {
+    transform: scale(1.05);
 }
 
 .badge-card {
   width: 140px;
   cursor: pointer;
   text-align: center;
-};
+}
+
+.badge-detail {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+}
 
 #badge-container li::before {
     content: none !important;
-};
+}
 
 .primary-color {
     color: var(--bs-primary);
