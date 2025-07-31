@@ -732,7 +732,37 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#accrdn-cv">
                         <div class="accordion-body">
-                            <p>
+<!-- Testing code -->
+                            <div class="container py-3">
+                                <div class="row row-cols-1 row-cols-sm-2 g-4 text-center">
+                            
+                                    <div class="col">
+                                        <div class="p-3 border rounded shadow-sm" data-bs-toggle="tooltip"
+                                            title="Keeps me physically tuned to support technical focus and stamina.">
+                                            <i class="bi bi-droplet-half fs-2 text-primary"></i>
+                                            <h5 class="mt-2">Swimming</h5>
+                                            <p class="small text-muted">Regular lane swims at the local baths.</p>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="col">
+                                        <div class="p-3 border rounded shadow-sm" data-bs-toggle="tooltip"
+                                            title="Engagement with real-world communities through structured events.">
+                                            <i class="bi bi-people-fill fs-2 text-success"></i>
+                                            <h5 class="mt-2">Volunteering</h5>
+                                            <p class="small text-muted">GoalBall UK, Swim England, British Uni Sports, Table Tennis.</p>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                            
+                            <script>
+                                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                                const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+                            </script>
+
+                            <!--<p>
                             <ol>
                                 <li><b>Swimming -</b> In order to keep fit I regularly go lane swimming at the local
                                     baths.
@@ -743,7 +773,7 @@
                                     something to
                                     fill in my spare time.</li>
                             </ol>
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                 </div>
