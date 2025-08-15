@@ -15,6 +15,7 @@ This document outlines the use of AI assistance across projects authored by Mark
 All final decisions, ethical boundaries, and system architecture are authored by Mark. AI tools were used as collaborators, not creators.
 
 ## Linked Projects
-- [Recon-Suite](https://github.com/yourusername/recon-suite)
-- [Kali-toolbox](https://github.com/yourusername/kali-toolbox)
-- [CV Website](https://yourdomain.com)
+- [Recon-Suite](https://github.com/Mark-a-Hamilton/recon-suite)
+- [Kali-toolbox](https://github.com/Mark-a-Hamilton/kali-toolbox)
+- [CV Website](https://github.com/Mark-a-Hamilton/Mark-a-Hamilton.github.io)
+
