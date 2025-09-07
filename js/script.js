@@ -33,7 +33,9 @@ const badges = [
     { src: "/img/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
     { src: "/img/90.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
     { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
-    { src: "/img/180.jpg", alt: "180 Day Streak", title: "180 Day Streak" }
+    { src: "/img/180.jpg", alt: "180 Day Streak", title: "180 Day Streak" },
+    { src: "/img/3.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
+    { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () { renderBadges(badges); });
