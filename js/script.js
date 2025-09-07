@@ -20,6 +20,7 @@ function showBadgeModal(title, imagePath) {
 
 const badges = [
     { src: "/img/LoggingLegend.jpg", alt: "Logging Legend", title: "Logging Legend" },
+    { src: "/img/3.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
     { src: "/img/7.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
     { src: "/img/www.jpg", alt: "World Wide Web", title: "World Wide Web" },
     { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
@@ -34,7 +35,6 @@ const badges = [
     { src: "/img/90.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
     { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
     { src: "/img/180.jpg", alt: "180 Day Streak", title: "180 Day Streak" },
-    { src: "/img/3.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
     { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" }
 ];
 
