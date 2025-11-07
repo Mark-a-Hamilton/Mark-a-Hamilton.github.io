@@ -38,6 +38,7 @@ const badges = [
     { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" },
     { src: "/img/Raffle-Royalty.jpg", alt: "Raffle Royalty", title: "Raffle Royalty" },
     { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
+    { src: "/img/FirstAlertClosed.jpg", alt: "First Alert Closed", title: "First Alert Closed" },
     { src: "/img/100_truePositive.jpg", alt: "100% True Positive", title: "100% True Positive" },
     { src: "/img/FirstScenario.jpg", alt: "First Scenario", title: "First Scenario" }
 ];
