@@ -27,7 +27,7 @@ const badges = [
     { src: "/img/100_truePositive.jpg", alt: "100% True Positive", title: "100% True Positive" },
     { src: "/img/Blue.jpg", alt: "Blue", title: "Blue" },
     { src: "/img/CatLinux.jpg", alt: "CAT Linux.txt", title: "CAT Linux.txt" },
-    { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" },
+    { src: "/img/CourseAwakens.jpg", alt: "Course Awakens", title: "Course Awakens" },
     { src: "/img/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
     { src: "/img/FirstAlertClosed.jpg", alt: "First Alert Closed", title: "First Alert Closed" },
     { src: "/img/FirstScenario.jpg", alt: "First Scenario", title: "First Scenario" },
