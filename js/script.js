@@ -40,7 +40,6 @@ const badges = [
     { src: "/img/SecurityAwareness.jpg", alt: "Security Awareness", title: "Security Awareness" },
     { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
     { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
-    { src: "/img/Terminalled.jpg", alt: "Terminalled", title: "Terminalled" },
     { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
     { src: "/img/www.jpg", alt: "World Wide Web", title: "World Wide Web" }
 ];
