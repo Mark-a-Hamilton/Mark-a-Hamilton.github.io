@@ -19,28 +19,30 @@ function showBadgeModal(title, imagePath) {
 };
 
 const badges = [
-    { src: "/img/LoggingLegend.jpg", alt: "Logging Legend", title: "Logging Legend" },
     { src: "/img/3.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
     { src: "/img/7.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
-    { src: "/img/www.jpg", alt: "World Wide Web", title: "World Wide Web" },
-    { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
-    { src: "/img/Terminalled.jpg", alt: "CAT Linux.txt", title: "CAT Linux.txt" },
-    { src: "/img/LinuxPrivEsc.jpg", alt: "Linux Privilege Escalation", title: "Linux Privilege Escalation" },
     { src: "/img/30.jpg", alt: "30 Day Streak", title: "30 Day Streak" },
-    { src: "/img/SecurityAwareness.jpg", alt: "Security Awareness", title: "Security Awareness" },
-    { src: "/img/Blue.jpg", alt: "Blue", title: "Blue" },
-    { src: "/img/IntroToSecurityEngineering.jpg", alt: "Introduction to Security Engineering", title: "Introduction to Security Engineering" },
-    { src: "/img/OWasp10.jpg", alt: "OWASP Top 10", title: "OWASP Top 10" },
-    { src: "/img/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
     { src: "/img/90.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
-    { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
     { src: "/img/180.jpg", alt: "180 Day Streak", title: "180 Day Streak" },
-    { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" },
-    { src: "/img/Raffle-Royalty.jpg", alt: "Raffle Royalty", title: "Raffle Royalty" },
-    { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
-    { src: "/img/FirstAlertClosed.jpg", alt: "First Alert Closed", title: "First Alert Closed" },
     { src: "/img/100_truePositive.jpg", alt: "100% True Positive", title: "100% True Positive" },
-    { src: "/img/FirstScenario.jpg", alt: "First Scenario", title: "First Scenario" }
+    { src: "/img/Blue.jpg", alt: "Blue", title: "Blue" },
+    { src: "/img/CatLinux.jpg", alt: "CAT Linux.txt", title: "CAT Linux.txt" },
+    { src: "/img/Course-Awakens.jpg", alt: "Course Awakens", title: "Course Awakens" },
+    { src: "/img/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
+    { src: "/img/FirstAlertClosed.jpg", alt: "First Alert Closed", title: "First Alert Closed" },
+    { src: "/img/FirstScenario.jpg", alt: "First Scenario", title: "First Scenario" },
+    { src: "/img/IntroToSecurityEngineering.jpg", alt: "Introduction to Security Engineering", title: "Introduction to Security Engineering" },
+    { src: "/img/Investigations.jpg", alt: "Investigations", title: "Investigations" },
+    { src: "/img/LinuxPrivEsc.jpg", alt: "Linux Privilege Escalation", title: "Linux Privilege Escalation" },
+    { src: "/img/LoggingLegend.jpg", alt: "Logging Legend", title: "Logging Legend" },
+    { src: "/img/OWasp10.jpg", alt: "OWASP Top 10", title: "OWASP Top 10" },
+    { src: "/img/Raffle-Royalty.jpg", alt: "Raffle Royalty", title: "Raffle Royalty" },
+    { src: "/img/SecurityAwareness.jpg", alt: "Security Awareness", title: "Security Awareness" },
+    { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
+    { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
+    { src: "/img/Terminalled.jpg", alt: "Terminalled", title: "Terminalled" },
+    { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
+    { src: "/img/www.jpg", alt: "World Wide Web", title: "World Wide Web" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () { renderBadges(badges); });
