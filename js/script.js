@@ -24,6 +24,7 @@ const badges = [
     { src: "/img/30.jpg", alt: "30 Day Streak", title: "30 Day Streak" },
     { src: "/img/90.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
     { src: "/img/180.jpg", alt: "180 Day Streak", title: "180 Day Streak" },
+    { src: "/img/365.jpg", alt: "365 Day Streak", title: "365 Day Streak" },
     { src: "/img/100_truePositive.jpg", alt: "100% True Positive", title: "100% True Positive" },
     { src: "/img/Blue.jpg", alt: "Blue", title: "Blue" },
     { src: "/img/CatLinux.jpg", alt: "CAT Linux.txt", title: "CAT Linux.txt" },
