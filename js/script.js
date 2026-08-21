@@ -40,6 +40,7 @@ const badges = [
     { src: "/img/OWasp10.jpg", alt: "OWASP Top 10", title: "OWASP Top 10" },
     { src: "/img/Raffle-Royalty.jpg", alt: "Raffle Royalty", title: "Raffle Royalty" },
     { src: "/img/SecurityAwareness.jpg", alt: "Security Awareness", title: "Security Awareness" },
+    { src: "/img/SOCL2.jpg", alt: "SOC Levelling-Up", title: "SOC Levelling-Up" },
     { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
     { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
     { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
