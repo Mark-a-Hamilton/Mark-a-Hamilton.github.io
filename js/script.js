@@ -44,6 +44,7 @@ const badges = [
     { src: "/img/SQLSlayer.jpg", alt: "SQL Slayer", title: "SQL Slayer" },
     { src: "/img/Terminated.jpg", alt: "Terminated!", title: "Terminated!" },
     { src: "/img/Webbed.jpg", alt: "Webbed", title: "Webbed" },
+    { src: "/img/WWinPrivesc.jpg", alt: "Windows Privilege Escalation", title: "Windows Privilege Escalation" },
     { src: "/img/www.jpg", alt: "World Wide Web", title: "World Wide Web" }
 ];
 
