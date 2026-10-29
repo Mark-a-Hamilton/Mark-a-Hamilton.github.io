@@ -33,6 +33,7 @@ const badges = [
     { src: "/img/CyberReady.jpg", alt: "Cyber Ready", title: "Cyber Ready" },
     { src: "/img/FirstAlertClosed.jpg", alt: "First Alert Closed", title: "First Alert Closed" },
     { src: "/img/FirstScenario.jpg", alt: "First Scenario", title: "First Scenario" },
+    { src: "/img/Ice.jpg", alt: "Ice", title: "Ice - Server Manager enumeration" },
     { src: "/img/IntroToSecurityEngineering.jpg", alt: "Introduction to Security Engineering", title: "Introduction to Security Engineering" },
     { src: "/img/Investigations.jpg", alt: "Investigations", title: "Investigations" },
     { src: "/img/LinuxPrivEsc.jpg", alt: "Linux Privilege Escalation", title: "Linux Privilege Escalation" },
