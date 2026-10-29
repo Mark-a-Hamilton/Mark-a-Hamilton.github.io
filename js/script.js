@@ -19,7 +19,7 @@ function showBadgeModal(title, imagePath) {
 };
 
 const badges = [
-    { src: "/img/31.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
+    { src: "/img/3.jpg", alt: "3 Day Streak", title: "3 Day Streak" },
     { src: "/img/7.jpg", alt: "7 Day Streak", title: "7 Day Streak" },
     { src: "/img/30.jpg", alt: "30 Day Streak", title: "30 Day Streak" },
     { src: "/img/90.jpg", alt: "90 Day Streak", title: "90 Day Streak" },
